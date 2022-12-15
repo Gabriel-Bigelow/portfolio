@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./Fonts/NunitoSans-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./Fonts/NunitoSans-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./Fonts/NunitoSans-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./Fonts/NunitoSans-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('./Fonts/Oswald-VariableFont_wght.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'AntrySans';
+    src: url('./Fonts/AntrySans.otf') format("opentype")
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('./Fonts/LEMONMILK-Medium.otf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('./Fonts/LEMONMILK-Bold.otf');
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.white {
+    color: white;
+}
+.blue {
+    color: hsla(217, 60%, 60%)
+}
+.satblue {
+    color: hsla(200, 100%, 60%)
 }
 
-.App-link {
-  color: #61dafb;
+.gold {
+    color: #FFBF00;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.green {
+    color: rgb(0, 255, 0);
+}
+
+
+
+
+
+
+body {
+    background-color: #0A131F;
+    margin: 0 2rem;
+    font-family: 'Nunito Sans';
+    color:white;
+    font-size: 18px;
+}
+
+section {
+    display:grid;
+    justify-items: center;
+}
+.section-body {
+    display: inline-block;
+    width: 60%;
+}
+
+.section-body p {
+    display: inline-block;
+}
+
+
+#left-arrow, #right-arrow {
+    position: absolute;
+    font-size: 3rem;
+    font-style: lemonMilk;
+    font-weight: 600;
+}
+
+#left-arrow {
+    left: 5%;
+    top: 50%;
+}
+#right-arrow {
+    right: 5%;
+    top: 50%;
 }

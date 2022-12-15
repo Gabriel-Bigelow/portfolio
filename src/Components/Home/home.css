@@ -1,0 +1,40 @@
+#home {
+
+}
+
+#home .section-body {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    border: none;
+}
+
+
+#home-title-container {
+    position: relative;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    transition-duration: 0.5s;
+    width: 90%;
+}
+
+#home h1 {
+    display: inline-block;
+    font-family: LemonMilk;
+    font-size: 4.5rem;
+    text-align: center;
+    line-height: 6rem;
+    color: hsla(217, 90%, 90%);
+    font-weight: 400;
+    margin-top: 8rem;
+    margin-bottom: 0px;
+    transition-duration: 0.5s;
+}
+
+#home h3 {
+    display: grid;
+    font-family: LemonMilk;
+    margin: 0px;
+    color: #FFBF00;
+    display: inline-block;
+}
