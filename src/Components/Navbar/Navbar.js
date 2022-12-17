@@ -32,10 +32,10 @@ export default function Navbar () {
                 <Link to="/" id="home-link"><span className='blue'>&lt;</span>  <span className='white'>gb/</span>  <span className='gold'>&gt;</span></Link>
             </div>
             <ul>
-                <strong><Link to="/about"><li id="about-link" >/ABOUT ME</li></Link></strong>
-                <strong><Link to="/projects"><li id="projects-link">/PROJECTS</li></Link></strong>
-                <strong><Link to="/skills"><li id="skills-link">/SKILLS</li></Link></strong>
-                <strong><Link to="/contact"><li id="contact-link">/CONTACT</li></Link></strong>
+                <li><Link id="about-link" to="/about"><strong>/ABOUT ME</strong></Link></li>
+                <li><Link id="projects-link" to="/projects"><strong>/PROJECTS</strong></Link></li>
+                <li><Link id="skills-link" to="/skills"><strong>/SKILLS</strong></Link></li>
+                <li><Link id="contact-link" to="/contact"><strong>/CONTACT</strong></Link></li>
                 
             </ul>
         </div>

@@ -12,13 +12,13 @@ export function animationStatus (status) {
     animationHalt = status;
 }
 
-export function loop (section, body, sectionId, bodyId) {
+export function terminalOutput (section, body, sectionId, bodyId) {
     let sectionThemed = '<span class="satblue">$</span> node <span class="gold">' + section + '.js</span>'
     
     let sectionSlice;
     let bodySlice;
     setTimeout(() => {
-        console.log('looping');
+        console.log('terminalOutputing');
         if (sectionChars === 0) {
             sectionChars += 31;
         }
@@ -56,7 +56,7 @@ export function loop (section, body, sectionId, bodyId) {
             return;
         }
 
-        loop(section, body, sectionId, bodyId);
+        terminalOutput(section, body, sectionId, bodyId);
     }, 1000/60)
 }
 

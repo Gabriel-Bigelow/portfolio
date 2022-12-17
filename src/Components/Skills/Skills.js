@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loop } from "../../functions/terminalOutputter";
+import { terminalOutput } from "../../functions/terminalOutputter";
 import { selectBodyText, selectSection, setBodyText, setSection } from "../Section/sectionBodySlice";
 
 
@@ -22,7 +22,7 @@ export default function Skills () {
 
         if (section === 'Skills' && body.length > 0) {
             setTimeout(() => {
-                loop(section, body, 'skills-title', 'skills-body');
+                terminalOutput(section, body, 'skills-title', 'skills-body');
             }, 100);
         }
     }, [section, body]);

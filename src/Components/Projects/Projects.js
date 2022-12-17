@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { loop } from "../../functions/terminalOutputter";
+import { terminalOutput } from "../../functions/terminalOutputter";
 import { selectBodyText, selectSection, setBodyText, setSection } from "../Section/sectionBodySlice";
 
 
@@ -19,7 +19,7 @@ export default function Projects () {
 
         if (section === 'Projects' && body.length > 0) {
             setTimeout(() => {
-                loop(section, body, 'projects-title', 'projects-body');
+                terminalOutput(section, body, 'projects-title', 'projects-body');
             }, 100);
         }
     }, [section, body]);

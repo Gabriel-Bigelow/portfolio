@@ -1,13 +1,25 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loop } from "../../functions/terminalOutputter";
+import { useNavigate } from "react-router";
+import { arrowNavigate, handleNavigation, styleBeforeNavigate } from "../../functions/arrowNavigation";
+import { terminalOutput } from "../../functions/terminalOutputter";
 import {  selectBodyText, selectSection, setBodyText,setSection } from "../Section/sectionBodySlice"
+import arrow from '../../images/arrow.svg'
+
 
 
 export default function About () {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const section = useSelector(selectSection);
     const body = useSelector(selectBodyText);
+
+    function handleNavigation ({target}, navigateFunction = navigate) {
+        styleBeforeNavigate(target); 
+        setTimeout(() => {
+            navigateFunction(arrowNavigate(target));
+        }, 1000)
+    }
 
 
     useEffect(() => {
@@ -25,7 +37,7 @@ export default function About () {
 
         if (section === 'AboutMe' && body.length > 0) {
             setTimeout(() => {
-                loop(section, body, 'about-me-title', 'about-me-body');
+                terminalOutput(section, body, 'about-me-title', 'about-me-body');
             }, 100);
         }
     }, [section, body]);
@@ -37,6 +49,8 @@ export default function About () {
 
                 <p id="about-me-body"></p>
             </div>
+            <img className="left-arrow" id="left" src={arrow} alt="navigate left" to="/" onClick={handleNavigation} />
+            <img className="right-arrow" id="right" src={arrow} alt="navigate right" to="/projects" onClick={handleNavigation} />
         </section>
     )
 }

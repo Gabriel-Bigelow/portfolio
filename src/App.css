@@ -58,45 +58,70 @@
     color: rgb(0, 255, 0);
 }
 
+.blur5 {
+    filter: blur(5px);
+}
+
+.blur10 {
+    filter: blur(10px);
+}
+
+.blur20 {
+    filter: blur(20px);
+}
 
 
 
 
+html {
+    overflow-x: hidden;
+}
 
 body {
     background-color: #0A131F;
     margin: 0 2rem;
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans', sans-serif;
     color:white;
     font-size: 18px;
 }
 
 section {
+    position: relative;
+    width: 100%;
     display:grid;
     justify-items: center;
-}
-.section-body {
-    display: inline-block;
-    width: 60%;
-}
-
-.section-body p {
-    display: inline-block;
+    transition-duration: 0.5s;
 }
 
 
-#left-arrow, #right-arrow {
+.left-arrow, .right-arrow {
     position: absolute;
-    font-size: 3rem;
-    font-style: lemonMilk;
-    font-weight: 600;
+    height: 70px;
+    transition-duration: 0.5s;
 }
 
-#left-arrow {
-    left: 5%;
-    top: 50%;
+
+.left-arrow:hover, .right-arrow:hover {
+    cursor: pointer;
+    top: 48%;
+    height: 90px;
 }
-#right-arrow {
-    right: 5%;
+.left-arrow:hover {
+    left: 0%;
+
+}
+.right-arrow:hover {
+    right: 0%;
+}
+
+.left-arrow {
+    left: 2%;
     top: 50%;
+    transform: rotate(180deg);
+    filter: invert(76%) sepia(78%) saturate(2314%) hue-rotate(359deg) brightness(103%) contrast(105%);
+}
+.right-arrow {
+    right: 2%;
+    top: 50%;
+    filter: invert(76%) sepia(78%) saturate(2314%) hue-rotate(359deg) brightness(103%) contrast(105%);
 }
