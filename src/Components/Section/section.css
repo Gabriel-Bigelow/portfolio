@@ -1,4 +1,91 @@
-.section-body {
-    height: 90%;
-    width: 80%;
+body {
+    background: url('../../images/spaceDark.webp');
 }
+
+section {
+    position: relative;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template: 1fr / 5% 1fr 5%;
+    margin-left: 220%;
+}
+
+
+
+#terminal img {
+    width: 100%;
+    height: auto;
+}
+
+.section-body {
+    width: 80%;
+    min-height: 200px;
+    
+    grid-column: 2;
+    display: grid;
+}
+
+
+#terminal {
+    display: grid;
+    position: relative;
+    grid-template: auto /  20% minMax(80%, 80%);
+    justify-content: center;
+    min-height: 230px;
+}
+
+#terminal #terminal-images {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 0;
+    width: 80%;
+    padding: 50px 30px;
+}
+
+#terminal #top-frame {
+    position: absolute;
+    display: grid;
+    grid-template: 30px / 30px 1fr 1fr;
+    grid-column: 1 / span 2;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color:rgba(22, 27, 54, 0.8);
+    align-items: center;
+}
+#top-frame p {
+    margin: 0 10px;
+    color:hsla(217, 60%, 80%);
+    font-size: 0.9rem;
+    width: 100%;
+}
+#top-frame img {
+    height: 18px;
+    margin-left: 5px;
+}
+
+#terminal-background {
+    position: relative;
+    border: solid 2px hsla(217, 60%, 60%, 0.5);
+    background-color: rgba(20, 20, 20, 0.7);
+    width: 100%;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    filter: blur(5px);
+}
+#terminal-output {
+    position:relative;
+    grid-row: 1;
+    grid-column: 2;
+    padding: 30px;
+}
+
+#terminal-output p {
+    margin: 0 0 3rem;
+}
+
+
+
+

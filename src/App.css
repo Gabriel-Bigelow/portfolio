@@ -1,3 +1,11 @@
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+
+
 @font-face {
     font-family: 'Nunito Sans';
     src: url('./Fonts/NunitoSans-Regular.ttf');
@@ -82,33 +90,28 @@ body {
     margin: 0 2rem;
     font-family: 'Nunito Sans', sans-serif;
     color:white;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
-section {
-    position: relative;
-    width: 100%;
-    display:grid;
-    justify-items: center;
-    transition-duration: 0.5s;
-}
+
+
 
 
 .left-arrow, .right-arrow {
     position: absolute;
-    height: 70px;
+    height: 4.375rem;
     transition-duration: 0.5s;
+    z-index: 10;
 }
 
 
 .left-arrow:hover, .right-arrow:hover {
     cursor: pointer;
     top: 48%;
-    height: 90px;
+    height: 5.625rem;
 }
 .left-arrow:hover {
     left: 0%;
-
 }
 .right-arrow:hover {
     right: 0%;
@@ -119,6 +122,7 @@ section {
     top: 50%;
     transform: rotate(180deg);
     filter: invert(76%) sepia(78%) saturate(2314%) hue-rotate(359deg) brightness(103%) contrast(105%);
+    grid-column: 1;
 }
 .right-arrow {
     right: 2%;
