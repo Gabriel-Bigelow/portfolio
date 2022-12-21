@@ -1,38 +1,73 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import { terminalOutput } from "../../functions/terminalOutputter";
 import { selectBodyText, selectSection, setBodyText, setSection } from "../Section/sectionBodySlice";
+import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 
+import './contact.css';
+
+import arrow from '../../images/arrow.svg';
+import gitbash from '../../images/git-bash.svg';
 
 export default function Contact () {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const section = useSelector(selectSection);
     const body = useSelector(selectBodyText);
+
+    function handleNavigation ({target}, navigateFunction = navigate) {
+        styleBeforeNavigate(target); 
+        setTimeout(() => {
+            navigateFunction(arrowNavigate(target));
+        }, 100)
+    }
+
 
 
     useEffect(() => {
         dispatch(setSection('Contact'));
-        dispatch(setBodyText(`Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece 
-        of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
-        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
-         passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
-         Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and 
-            Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. 
-            The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.`))
+        dispatch(setBodyText(`Let's get in touch.`))
 
         if (section === 'Contact' && body.length > 0) {
             setTimeout(() => {
                 terminalOutput(section, body, 'contact-title', 'contact-body');
+                document.getElementById('terminal-output').style.gridColumn = "1 / span 2";
             }, 100);
+            styleNavigatedFrom();
         }
     }, [section, body, dispatch]);
 
     return (
-        <section id="about">        
+
+
+
+        <section id="contact">        
+            <img className="left-arrow" id="left" src={arrow} alt="navigate left" to="/projects" onClick={handleNavigation} />
             <div className="section-body">
-                <h2 id="contact-title"> </h2>
-                <p id="contact-body"> </p>
+                <div id="terminal">
+                    <div id="terminal-background"></div>
+                    <div id="top-frame"><img src={gitbash} alt="gitbash" /><p>MINGW64:/gb/portfolio/{section}</p></div>
+                    <div id="terminal-output">
+                        <h2 id="contact-title"> </h2>
+                        <p id="contact-body"> </p>
+
+
+                        <div id="contact-form-container">
+                            <form id="contact-form">
+                                <input className="width100" id="name" type="text" placeholder="Name" required></input>
+                                <input className="width100" id="email" type="email" placeholder="Email" required></input>
+                                <textarea className="width100" id="message" type="text" placeholder="Message" required></textarea>
+                                <input id="submit" type="submit" value="Send"></input>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+            <img className="right-arrow" id="right" src={arrow} alt="navigate right" to="/contact" onClick={handleNavigation} />
         </section>
-    )
+        
+    );
 }

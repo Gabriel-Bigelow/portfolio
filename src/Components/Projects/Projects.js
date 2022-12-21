@@ -75,7 +75,10 @@ export default function Projects () {
 
             for (let container of containers) {
                 if (container.id !== `${selectedProject}-container`) {
-                    container.style.width = '10%';
+                    container.style.width = '0%';
+                    setTimeout(() => {
+                        document.getElementById('favorite-projects').style.flexWrap = 'wrap';
+                    }, 500)
                 } else {
                     container.style.width = "100%";
                 }
@@ -130,9 +133,11 @@ export default function Projects () {
                 }
             }
         } else {
+            document.getElementById('favorite-projects').style.flexWrap = 'nowrap';
             for (let container of containers) {
                 container.style.width = '100%';
             }
+
             
             for (let long of longs) {
                 long.style.opacity = 0;
@@ -201,7 +206,9 @@ export default function Projects () {
 
     return (
         <section id="projects" onMouseOver={stopVideoPreview} onClick={handleClick}>
+
             <img className="left-arrow" id="left" src={arrow} alt="navigate left" to="/about" onClick={handleNavigation} />
+
             <div className="section-body">
                 <div id="terminal">
                     <div id="terminal-background"></div>
@@ -211,6 +218,7 @@ export default function Projects () {
                         <p id="projects-body"> </p>
                     </div>
                 </div>
+
                 <div id="favorite-projects">
 
                     <div className="project" id="lurker-container" onMouseOver={handleMouseOver}>
@@ -219,7 +227,6 @@ export default function Projects () {
                             <source src={lurkerVid}></source>
                         </video>
                         <img className="project-image" id="lurker-image" alt="Lurker project preview" src={lurker}/>
-
                         <h3 className="project-title" id="lurker-title">Lurker</h3>
                         <h4 className="project-short" id="lurker-short">Lurker is a React app that uses the Reddit API to 
                         create a streamlined "lurker" version of Reddit, enhancing user experience by removing unessential elements.</h4>
@@ -265,7 +272,6 @@ export default function Projects () {
                             <source src={superBallManiaVid}></source>
                         </video>
                         <img className="project-image" id="super-ball-mania-image" alt="Super Ball Mania project preview" src={superBallMania}/>
-
                         <h3 className="project-title" id="super-ball-mania-title">Super Ball Mania</h3>
                         <h4 className="project-short" id="super-ball-mania-short">Super Ball Mania is a JavaScript-based game written using the
                         HTML canvas element, vanilla JavaScript, along with other HTML and CSS.</h4>
@@ -286,7 +292,6 @@ export default function Projects () {
                                 
                                 <a className="satblue" href="https://github.com/Gabriel-Bigelow/super-ball-mania">Here is a link to the GitHub repository!</a>
                                 
-
                             <p>
                                 This was one of my favorite projects because it was my first experience releasing a product to a considerable userbase. This taught me several things, such as the importance
                                 of thoroughly testing edge cases in your code before release, how to use software packagers, bundlers, and push that software to an external database.
@@ -301,8 +306,9 @@ export default function Projects () {
                     </div>
                     
 
-                    
                 </div>
+
+                
             </div>
 
 

@@ -1,0 +1,47 @@
+#contact-form {
+    display: grid;
+    grid-template: auto / 1fr;
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+input, #message {
+    background-color: hsla(217, 20%, 20%, 0.5);
+    color: hsla(217, 60%, 90%, 1);
+    padding: 1rem;
+    border: 1px solid hsla(217, 80%, 80%, 0.5);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Nunito Sans';
+}
+
+input::placeholder, #message::placeholder {
+    color: hsla(217, 80%, 80%, 0.5);
+}
+
+input:focus, #message:focus {
+    outline: none;
+    border: 2px solid hsla(217, 100%, 80%, 1);
+}
+
+#message {
+    resize: none;
+    height: 20rem;
+}
+
+#submit {
+    font-size: 1rem;
+    font-weight: 600;
+    transition-duration: 0.2s;
+}
+
+#submit:hover {
+    cursor: pointer;
+    color: hsla(217, 10%, 10%, 1);
+    background-color: hsla(217, 100%, 80%, 1);
+}
+
+.width100 {
+    width: 100%;
+}
