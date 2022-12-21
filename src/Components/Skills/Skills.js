@@ -39,27 +39,27 @@ export default function Skills () {
     useEffect(() => {
         dispatch(setSection('Skills'));
         dispatch(setBodyText(`These are the technologies that I use!
-        <ul>
-        <li><span class="list-header">Front-End</span><ul>
-                <li>JavaScript (vanilla, React, Redux)</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul></li>
-        <li><span class="list-header">Back-End</span><ul>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>PostgreSQL</li>
-            </ul></li>
-        <li><span class="list-header">Development Tools and Skills</span><ul>
-            <li>Visual Studio Code</li>
-            <li>Node Package Manager</li>
-            <li>Chrome Dev Tools</li>
-            <li>Git & GitHub</li>
-            <li>Postman</li>
-            <li>Postbird</li>
-            <li>Accessibility</li>
-            </ul></li>
-    </ul>
+        <ul id="tech-list">
+            <li><span class="list-header">Front-End</span><ul>
+                    <li>JavaScript (vanilla, React, Redux)</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul></li>
+            <li><span class="list-header">Back-End</span><ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>PostgreSQL</li>
+                </ul></li>
+            <li><span class="list-header">Development Tools and Skills</span><ul>
+                <li>Visual Studio Code</li>
+                <li>Node Package Manager</li>
+                <li>Chrome Dev Tools</li>
+                <li>Git & GitHub</li>
+                <li>Postman</li>
+                <li>Postbird</li>
+                <li>Accessibility</li>
+                </ul></li>
+        </ul>
         `))
 
         if (section === 'Skills' && body.length > 0) {

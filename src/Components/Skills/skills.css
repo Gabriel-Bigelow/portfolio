@@ -1,7 +1,14 @@
 
 #skills #terminal-output #list-container {
     display: grid;
-    width: 50%;
+    width: 65%;
+}
+#tech-list {
+    padding-left: 0px;
+}
+
+#tech-list ul {
+    margin-bottom: 1.5rem;   
 }
 
 #skills #terminal-output {
@@ -17,7 +24,7 @@
 
 
 #skills .list-header {
-    
+    display: inline-block;
     color: #ffde7c;
     font-weight: 600;
     font-size: 1.5rem;
@@ -45,7 +52,6 @@
 .skill-img {
     margin: auto;
     height: 3rem;
-    padding: 0.5rem;
     filter: drop-shadow(0 0 18mm rgb(156, 240, 255));
 }
 
