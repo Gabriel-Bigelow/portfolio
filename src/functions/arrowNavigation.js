@@ -13,12 +13,12 @@ export function styleBeforeNavigate (target) {
 
 //start the navigated-to section off-screen and slide it in, based on the direction it was navigated to from.
 export function styleNavigatedFrom () {
+    console.log(navigatedFrom);
     if (!document.querySelectorAll('section')[0].style.marginLeft) {
         if (navigatedFrom === 'left') {
             document.querySelectorAll('section')[0].style.marginLeft = '-120%';
             document.querySelectorAll('section')[0].style.transitionDuration = '0.3s';
         } else if (navigatedFrom === 'right') {
-            console.log(document.querySelectorAll('section'));
             document.querySelectorAll('section')[0].style.marginLeft = '120%';
             document.querySelectorAll('section')[0].style.transitionDuration = '0.3s';
         }
@@ -27,7 +27,7 @@ export function styleNavigatedFrom () {
     setTimeout(() => {
         document.querySelectorAll('section')[0].style.transitionDuration = '0.3s';
         document.querySelectorAll('section')[0].style.marginLeft = 0;
-    }, 0);
+    }, 100);
 }
 
 export function arrowNavigate (target) {

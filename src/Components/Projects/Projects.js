@@ -49,11 +49,11 @@ export default function Projects () {
             }
             if (title) {
                 title.style.opacity = 1;
-                title.style.fontSize = '1.3rem';
+                title.style.fontSize = '1.5rem';
             }
             if (short) {
                 short.style.opacity = 1;
-                short.style.fontSize = '1rem';     
+                short.style.fontSize = '1.15rem';     
             }    
         }
     }
@@ -61,10 +61,7 @@ export default function Projects () {
     function handleClick ({target}) {
         if (selectedProject && target.id.includes(selectedProject) || selectedProject && target.parentElement.id.includes(selectedProject)) {
             selectedProject = selectedProject;
-            console.log(selectedProject);
         } else {
-            console.log(target.parentElement);
-            console.log(selectedProject);
             selectedProject = target.parentElement.id.includes('container') ? target.parentElement.id.slice(0, target.parentElement.id.length - 10) : undefined;
         }
         
@@ -105,7 +102,7 @@ export default function Projects () {
                     title.style.fontSize = 0;
                 } else {
                     title.style.opacity = 1;
-                    title.style.fontSize = '1.3rem';
+                    title.style.fontSize = '1.5rem';
                 }
             }
 
@@ -114,13 +111,13 @@ export default function Projects () {
                     short.style.fontSize = 0;
                     short.style.opacity = 0;
                 } else {
-                    short.style.fontSize = '1rem';
+                    short.style.fontSize = '1.15rem';
                     short.style.opacity = 1;
                 }
             }
 
             if (targetLong) {
-                targetLong.style.display = 'block';
+                targetLong.style.display = 'grid';
                 setTimeout(() => {
                     targetLong.style.opacity = 1;
                 }, 100)
@@ -286,7 +283,7 @@ export default function Projects () {
                         <h4 className="project-short" id="super-ball-mania-short">Super Ball Mania is a JavaScript-based game written using the
                         HTML canvas element, vanilla JavaScript, along with other HTML and CSS.</h4>
                         <div className="project-long" id="super-ball-mania-long">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0oGnMlXCTE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="70%" height="300px" src="https://www.youtube.com/embed/0oGnMlXCTE8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             <p> Super Ball Mania is a JavaScript-based multiplayer party game that utilizes the HTML canvas element, Gamepad API, and vanilla JavaScript. 
                                 It was originally written for myself and a couple friends, but after having so much fun with it, I decided to release it on the major 
                                 global software-distribution platform, Steam, where it has since amassed over 10,000 unique users and positive reviews.
@@ -294,14 +291,17 @@ export default function Projects () {
                                 <br></br>
                                 The game is playable with up to 8 players (4 gamepads and 4 keyboard players OR 8 gamepads, with the assistance of a third-party controller grouping software such as reWASD)
                                 who will duke it out in 10 unique minigames, competing to have the most total points by the end of the game. The game also has working online-multiplayer through the use of Steam Remote Play Together.
-                                <br></br>
-                                <br></br>
+                                </p>
                                 <a className="satblue" href="https://store.steampowered.com/app/2101990/Super_Ball_Mania/">Check it out on Steam here!</a>
                                 <br></br>
+                                <a className="satblue" href="https://super-ball-mania.netlify.app/">Or check out the browser version here</a>
                                 <br></br>
-
                                 
-                                This was one of my favorite projects because it was my first experience releasing a product to a userbase. This taught me several things, such as the importance
+                                <a className="satblue" href="https://github.com/Gabriel-Bigelow/super-ball-mania">Here is a link to the GitHub repository!</a>
+                                
+
+                            <p>
+                                This was one of my favorite projects because it was my first experience releasing a product to a considerable userbase. This taught me several things, such as the importance
                                 of thoroughly testing edge cases in your code before release, how to use software packagers, bundlers, and push that software to an external database.
                                 I had a lot of fun squashing bugs for my users and ensuring that their experience with my product was a pleasant one, whether those bugs were brought to my attention by
                                 direct messages, comments, or my own personal testing.

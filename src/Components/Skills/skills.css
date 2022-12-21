@@ -1,0 +1,62 @@
+
+#skills #terminal-output #list-container {
+    display: grid;
+    width: 50%;
+}
+
+#skills #terminal-output {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#skills #skills-title {
+    width: 100%;
+}
+
+
+
+#skills .list-header {
+    
+    color: #ffde7c;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#skills li {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#skills-container {
+    display: grid;
+    height: 200px;
+    width: 100%;
+    grid-template: 1fr 1fr / 1fr;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#row1, #row2 {
+    display: flex;
+    
+}
+
+.skill-img {
+    margin: auto;
+    height: 3rem;
+    padding: 0.5rem;
+    filter: drop-shadow(0 0 18mm rgb(156, 240, 255));
+}
+
+.white-svg {
+    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(153deg) brightness(154%) contrast(104%) drop-shadow(0 0 18mm rgb(156, 240, 255));
+}
+
+.colorize-svg {
+    filter: invert(10%) sepia(0%) saturate(300%) brightness(104%) contrast(104%) drop-shadow(0 0 18mm rgb(156, 240, 255));
+}
+
+.drop-shadow {
+    filter: drop-shadow(0 -1mm 5mm rgb(17, 219, 255));
+}

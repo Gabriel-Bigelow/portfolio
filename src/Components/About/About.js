@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { arrowNavigate, handleNavigation, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 import { terminalDelay, terminalOutput, terminalOutputDelay } from "../../functions/terminalOutputter";
 import {  selectBodyText, selectSection, setBodyText,setSection } from "../Section/sectionBodySlice"
+import './about.css';
 import arrow from '../../images/arrow.svg'
 import gitbash from '../../images/git-bash.svg';
 import cert from '../../images/about/certification.webp';
@@ -53,7 +54,6 @@ export default function About () {
             setTimeout(() => {
                 terminalOutput(section, body, 'about-me-title', 'about-me-body', afterOutput);
             }, terminalDelay);
-            document.getElementById('')
             styleNavigatedFrom();
         }
     }, [section, body]);
@@ -64,15 +64,18 @@ export default function About () {
             <div className="section-body">
                 <div id="terminal">
                     <div id="terminal-background"></div>
-                    <div id="terminal-images">
-                        <img id="headshot" src={headshot} alt="A nice picture of a handsome young man"/>
+                    <div id="headshot">
+                        <img className="terminal-image" src={headshot} alt="A nice picture of a handsome young man"/>
                     </div>
                     <div id="top-frame"><img src={gitbash} /><p>MINGW64:/gb/portfolio/{section}</p></div>
                     <div id="terminal-output">
                         
                         <h2 id="about-me-title"></h2>
                         <p id="about-me-body"></p>
-                        <img src={cert} alt="certficate of completion for the Front-End Engineer course"/>
+                        <div id="cert-container">
+                            <img className="terminal-image" src={cert} alt="certficate of completion for the Front-End Engineer course"/>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

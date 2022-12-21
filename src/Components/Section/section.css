@@ -13,10 +13,12 @@ section {
 
 
 
-#terminal img {
+#terminal #topFrame img, .terminal-image {
     width: 100%;
+    max-width:600px;
     height: auto;
 }
+
 
 .section-body {
     width: 80%;
@@ -35,7 +37,7 @@ section {
     min-height: 230px;
 }
 
-#terminal #terminal-images {
+#terminal #headshot {
     grid-column: 1;
     grid-row: 1;
     z-index: 0;

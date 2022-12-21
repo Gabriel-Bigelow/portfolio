@@ -22,6 +22,10 @@
     justify-items: center;
 }
 
+.project p {
+    font-size: 1.1rem;
+}
+
 .project-cover {
     grid-row: 1;
     grid-column: 1;
@@ -65,6 +69,7 @@
 
 .project-long {
     display: none;
+    justify-items: center;
     opacity: 0;
     transition-duration: 0.3s;
     padding-bottom: 3rem 0;
