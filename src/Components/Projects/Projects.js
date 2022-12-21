@@ -13,7 +13,6 @@ import superBallManiaVid from '../../images/projects/superBallManiaVid.mp4';
 
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 
 
 export default function Projects () {
@@ -59,9 +58,7 @@ export default function Projects () {
     }
     
     function handleClick ({target}) {
-        if (selectedProject && target.id.includes(selectedProject) || selectedProject && target.parentElement.id.includes(selectedProject)) {
-            selectedProject = selectedProject;
-        } else {
+        if (!(selectedProject && target.id.includes(selectedProject)) || !(selectedProject && target.parentElement.id.includes(selectedProject))) {
             selectedProject = target.parentElement.id.includes('container') ? target.parentElement.id.slice(0, target.parentElement.id.length - 10) : undefined;
         }
         
@@ -148,16 +145,6 @@ export default function Projects () {
 
     function stopVideoPreview ({target}) {
         const targetVideo = document.getElementById(`${target.id}-video`);
-        let props;
-
-        if (targetVideo) {
-            for (let key of Object.keys(targetVideo)) {
-                if (key.includes('Props')) {
-                    props = key;
-                    break;
-                }
-            }
-        }
 
         const videos = document.getElementsByClassName('project-video');
         const projects = document.getElementsByClassName('project');
@@ -209,7 +196,7 @@ export default function Projects () {
             }, terminalDelay);
             styleNavigatedFrom();
         }
-    }, [section, body]);
+    }, [section, body, dispatch]);
 
 
     return (
@@ -218,10 +205,10 @@ export default function Projects () {
             <div className="section-body">
                 <div id="terminal">
                     <div id="terminal-background"></div>
-                    <div id="top-frame"><img src={gitbash} /><p>MINGW64:/gb/portfolio/{section}</p></div>
+                    <div id="top-frame"><img src={gitbash} alt="gitbash"/><p>MINGW64:/gb/portfolio/{section}</p></div>
                     <div id="terminal-output">
-                        <h2 id="projects-title"></h2>
-                        <p id="projects-body"></p>
+                        <h2 id="projects-title"> </h2>
+                        <p id="projects-body"> </p>
                     </div>
                 </div>
                 <div id="favorite-projects">
@@ -231,7 +218,7 @@ export default function Projects () {
                         <video className="project-video" id="lurker-video" loop>
                             <source src={lurkerVid}></source>
                         </video>
-                        <img className="project-image" id="lurker-image" src={lurker}/>
+                        <img className="project-image" id="lurker-image" alt="Lurker project preview" src={lurker}/>
 
                         <h3 className="project-title" id="lurker-title">Lurker</h3>
                         <h4 className="project-short" id="lurker-short">Lurker is a React app that uses the Reddit API to 
@@ -277,7 +264,7 @@ export default function Projects () {
                         <video className="project-video" id="super-ball-mania-video" loop>
                             <source src={superBallManiaVid}></source>
                         </video>
-                        <img className="project-image" id="super-ball-mania-image" src={superBallMania}/>
+                        <img className="project-image" id="super-ball-mania-image" alt="Super Ball Mania project preview" src={superBallMania}/>
 
                         <h3 className="project-title" id="super-ball-mania-title">Super Ball Mania</h3>
                         <h4 className="project-short" id="super-ball-mania-short">Super Ball Mania is a JavaScript-based game written using the
