@@ -25,13 +25,13 @@ export default function Contact () {
                 terminalOutput(section, body, 'contact-title', 'contact-body');
             }, 100);
         }
-    }, [section, body]);
+    }, [section, body, dispatch]);
 
     return (
         <section id="about">        
             <div className="section-body">
-                <h2 id="contact-title"></h2>
-                <p id="contact-body"></p>
+                <h2 id="contact-title"> </h2>
+                <p id="contact-body"> </p>
             </div>
         </section>
     )

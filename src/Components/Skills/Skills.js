@@ -4,14 +4,13 @@ import { useNavigate } from "react-router";
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 import { terminalOutput } from "../../functions/terminalOutputter";
 import { selectBodyText, selectSection, setBodyText, setSection } from "../Section/sectionBodySlice";
+
 import './skills.css';
+
 import arrow from '../../images/arrow.svg'
 import accessibility from '../../images/skills/accessibility.svg';
 import cmd from '../../images/skills/cmd.svg';
 import css from '../../images/skills/css.svg';
-
-
-import git from '../../images/skills/git.svg';
 import gitbash from '../../images/git-bash.svg';
 import github from '../../images/skills/github.svg';
 import html from '../../images/skills/html.svg';
@@ -70,8 +69,7 @@ export default function Skills () {
             }, 100);
             styleNavigatedFrom();
         }
-    }, [section, body]);
-
+    }, [section, body, dispatch]);
 
 
     return (
@@ -83,10 +81,10 @@ export default function Skills () {
             <div className="section-body">
                 <div id="terminal">
                     <div id="terminal-background"></div>
-                    <div id="top-frame"><img src={gitbash} /><p>MINGW64:/gb/portfolio/{section}</p></div>
+                    <div id="top-frame"><img src={gitbash} alt="gitbash" /><p>MINGW64:/gb/portfolio/{section}</p></div>
                     <div id="terminal-output">
-                        <h2 id="skills-title"></h2>
-                        <div id="list-container"><p id="skills-body"></p></div>
+                        <h2 id="skills-title"> </h2>
+                        <div id="list-container"> <p id="skills-body"></p></div>
                         
                         <div id="skills-container">
                             <div id="row1">

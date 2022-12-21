@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import { arrowNavigate, handleNavigation, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
-import { terminalDelay, terminalOutput, terminalOutputDelay } from "../../functions/terminalOutputter";
+import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
+import { terminalDelay, terminalOutput } from "../../functions/terminalOutputter";
 import {  selectBodyText, selectSection, setBodyText,setSection } from "../Section/sectionBodySlice"
 import './about.css';
 import arrow from '../../images/arrow.svg'
@@ -10,7 +10,14 @@ import gitbash from '../../images/git-bash.svg';
 import cert from '../../images/about/certification.webp';
 import headshot from '../../images/about/headshot.webp';
 
+function afterOutput() {
+    document.getElementById('helloWorld').onclick = helloWorld;
+    document.getElementById('helloWorld').style.cursor = "pointer";
+}
 
+function helloWorld () {
+    alert('Hello World! :)');
+}
 
 export default function About () {
     const dispatch = useDispatch();
@@ -25,14 +32,9 @@ export default function About () {
         }, 300)
     }
 
-    function helloWorld () {
-        alert('Hello World! :)');
-    }
 
-    function afterOutput() {
-        document.getElementById('helloWorld').onclick = helloWorld;
-        document.getElementById('helloWorld').style.cursor = "pointer";
-    }
+
+
 
     useEffect(() => {
         
@@ -56,7 +58,7 @@ export default function About () {
             }, terminalDelay);
             styleNavigatedFrom();
         }
-    }, [section, body]);
+    }, [section, body, dispatch]);
 
     return (
         <section id="about">
@@ -65,13 +67,13 @@ export default function About () {
                 <div id="terminal">
                     <div id="terminal-background"></div>
                     <div id="headshot">
-                        <img className="terminal-image" src={headshot} alt="A nice picture of a handsome young man"/>
+                        <img className="terminal-image" src={headshot} alt="A nice, handsome young man"/>
                     </div>
-                    <div id="top-frame"><img src={gitbash} /><p>MINGW64:/gb/portfolio/{section}</p></div>
+                    <div id="top-frame"><img src={gitbash} alt="gitbash" /><p>MINGW64:/gb/portfolio/{section}</p></div>
                     <div id="terminal-output">
                         
-                        <h2 id="about-me-title"></h2>
-                        <p id="about-me-body"></p>
+                        <h2 id="about-me-title"> </h2>
+                        <p id="about-me-body"> </p>
                         <div id="cert-container">
                             <img className="terminal-image" src={cert} alt="certficate of completion for the Front-End Engineer course"/>
                         </div>
