@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { terminalOutput } from "../../functions/terminalOutputter";
 import { selectBodyText, selectSection, setBodyText,setSection } from "../Section/sectionBodySlice"
 import { animateHome, resetAnimation } from "./homeAnimation";
 
@@ -8,7 +7,7 @@ import './home.css';
 import arrow from "../../images/arrow.svg";
 import city from "../../images/home/city.png";
 import crane from "../../images/home/crane.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { arrowNavigate, styleBeforeNavigate } from "../../functions/arrowNavigation";
 
 export default function Home () {
@@ -16,14 +15,6 @@ export default function Home () {
     const navigate = useNavigate();
     const section = useSelector(selectSection);
     const body = useSelector(selectBodyText);
-
-    function resize() {
-
-        setTimeout(() => {
-            resize();
-            console.log('resizing!');
-        }, 1000)
-    }
     
     useEffect(() => {
         if (section !== 'home') {
@@ -54,19 +45,6 @@ export default function Home () {
         setTimeout(() => {
             navigateFunction(arrowNavigate(target));
         }, 100)
-    }
-
-    function handleMouseOver({target}) {
-        const classArray = document.getElementsByClassName(target.className);
-
-        for (let element of classArray) {
-            console.log(element);
-            console.log(target.getBoundingClientRect().left);
-            console.log(target.getBoundingClientRect().top);
-            element.style.left = target.getBoundingClientRect().left;
-            element.style.top = target.getBoundingClientRect().top;
-            element.style.height = target.getBoundingClientRect().height;
-        }
     }
 
     return (
