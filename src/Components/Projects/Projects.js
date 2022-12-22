@@ -58,6 +58,8 @@ export default function Projects () {
     }
     
     function handleClick ({target}) {
+        //enlarge and focus the element that is moused over, and display the full project container, if it is a project
+        //else unfocus any focused projects
         if (!(selectedProject && target.id.includes(selectedProject)) || !(selectedProject && target.parentElement.id.includes(selectedProject))) {
             selectedProject = target.parentElement.id.includes('container') ? target.parentElement.id.slice(0, target.parentElement.id.length - 10) : undefined;
         }
@@ -148,6 +150,7 @@ export default function Projects () {
         }
     }
 
+    //stops video from being played when mouse is not over top of a project, and brings the preview image back to the front.
     function stopVideoPreview ({target}) {
         const targetVideo = document.getElementById(`${target.id}-video`);
 

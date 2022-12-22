@@ -1,20 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import emailjs from '@emailjs/browser';
 import { terminalOutput } from "../../functions/terminalOutputter";
 import { selectBodyText, selectSection, setBodyText, setSection } from "../Section/sectionBodySlice";
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
+
 
 import './contact.css';
 
 import arrow from '../../images/arrow.svg';
 import gitbash from '../../images/git-bash.svg';
 
+const serviceID = 'service_0yiyk7z';
+const templateID = 'template_s1lbpub';
+const publicKey = 'V4Vz8ytcd9G4KaQlc';
+
 export default function Contact () {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const section = useSelector(selectSection);
     const body = useSelector(selectBodyText);
+    const form = useRef();
+
+    function sendEmail (e) {
+        e.preventDefault();
+
+        emailjs.sendForm(serviceID, templateID, form.current, publicKey)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            })
+        e.target.reset();
+    }
 
     function handleNavigation ({target}, navigateFunction = navigate) {
         styleBeforeNavigate(target); 
@@ -22,7 +41,6 @@ export default function Contact () {
             navigateFunction(arrowNavigate(target));
         }, 100)
     }
-
 
 
     useEffect(() => {
@@ -43,7 +61,7 @@ export default function Contact () {
 
 
         <section id="contact">        
-            <img className="left-arrow" id="left" src={arrow} alt="navigate left" to="/projects" onClick={handleNavigation} />
+            <img className="left-arrow" id="left" src={arrow} alt="navigate left" to="/skills" onClick={handleNavigation} />
             <div className="section-body">
                 <div id="terminal">
                     <div id="terminal-background"></div>
@@ -54,10 +72,10 @@ export default function Contact () {
 
 
                         <div id="contact-form-container">
-                            <form id="contact-form">
-                                <input className="width100" id="name" type="text" placeholder="Name" required></input>
-                                <input className="width100" id="email" type="email" placeholder="Email" required></input>
-                                <textarea className="width100" id="message" type="text" placeholder="Message" required></textarea>
+                            <form id="contact-form" ref={form} onSubmit={sendEmail}>
+                                <input className="width100" id="name" name="name" type="text" placeholder="Name" required></input>
+                                <input className="width100" id="email" name="email" type="email" placeholder="Email" required></input>
+                                <textarea className="width100" id="message" name="message" type="text" placeholder="Message" required></textarea>
                                 <input id="submit" type="submit" value="Send"></input>
                             </form>
                         </div>
@@ -66,7 +84,7 @@ export default function Contact () {
                 </div>
             </div>
 
-            <img className="right-arrow" id="right" src={arrow} alt="navigate right" to="/contact" onClick={handleNavigation} />
+            <img className="right-arrow" id="right" src={arrow} alt="navigate right" to="/" onClick={handleNavigation} />
         </section>
         
     );

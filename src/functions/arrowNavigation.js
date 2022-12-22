@@ -13,7 +13,6 @@ export function styleBeforeNavigate (target) {
 
 //start the navigated-to section off-screen and slide it in, based on the direction it was navigated to from.
 export function styleNavigatedFrom () {
-    console.log(navigatedFrom);
     if (!document.querySelectorAll('section')[0].style.marginLeft) {
         if (navigatedFrom === 'left') {
             document.querySelectorAll('section')[0].style.marginLeft = '-120%';
@@ -30,6 +29,7 @@ export function styleNavigatedFrom () {
     }, 100);
 }
 
+//returns the to / href prop of the current arrow, to pass to the useNavigate function.
 export function arrowNavigate (target) {
     let props = undefined;
     for (let key of Object.keys(target)) {

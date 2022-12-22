@@ -10,11 +10,13 @@ import gitbash from '../../images/git-bash.svg';
 import cert from '../../images/about/certification.webp';
 import headshot from '../../images/about/headshot.webp';
 
+//function to add some props / styling to "helloWorld.js" strong element after it renders.
 function afterOutput() {
     document.getElementById('helloWorld').onclick = helloWorld;
     document.getElementById('helloWorld').style.cursor = "pointer";
 }
 
+//cheeky hello world function
 function helloWorld () {
     alert('Hello World! :)');
 }
