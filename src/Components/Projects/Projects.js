@@ -6,10 +6,10 @@ import { selectBodyText, selectSection, setBodyText, setSection } from "../Secti
 import "./projects.css";
 import arrow from '../../images/arrow.svg'
 import gitbash from '../../images/git-bash.svg';
-import lurker from '../../images/projects/lurker.png';
-import lurkerVid from '../../images/projects/lurkerVid.mp4';
-import superBallMania from '../../images/projects/superBallMania.png';
-import superBallManiaVid from '../../images/projects/superBallManiaVid.mp4';
+import lurker from '../../images/projects/lurker.webp';
+import lurkerVid from '../../images/projects/lurkerVid.webm';
+import superBallMania from '../../images/projects/superBallMania.webp';
+import superBallManiaVid from '../../images/projects/superBallManiaVid.webm';
 
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 import { useNavigate } from "react-router";

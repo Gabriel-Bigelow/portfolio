@@ -5,8 +5,8 @@ import { animateHome, resetAnimation } from "./homeAnimation";
 
 import './home.css';
 import arrow from "../../images/arrow.svg";
-import city from "../../images/home/city.png";
-import crane from "../../images/home/crane.png";
+import city from "../../images/home/city.webp";
+import crane from "../../images/home/crane.webp";
 import { useNavigate } from "react-router-dom";
 import { arrowNavigate, styleBeforeNavigate } from "../../functions/arrowNavigation";
 
