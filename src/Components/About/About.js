@@ -42,15 +42,18 @@ export default function About () {
         
         if (section !== 'AboutMe') {
             dispatch(setSection('AboutMe'));
-            dispatch(setBodyText(`My name is Gabriel Bigelow. I am a Front-End Developer from Toledo, Ohio.
+            dispatch(setBodyText(`
+            My name is Gabriel Bigelow. I am a Front-End Developer from Toledo, Ohio.
             <br><br>
-            I discovered my enthusiasm for programming just over 1 year ago. I stumbled upon the desire to learn to code while helping my brother start a 
-            pet market business, in which we had regular contact with web developers. I've always loved computers and technology, but until that 
-            point had not taken an interest in the programming side of things. 
+            I discovered my enthusiasm for programming in the summer of 2021 while helping my brother start a business,
+            in which we had regular contact with web developers. Having always loved computers and technology, I decided to look into online coding classes, and it was love at first
+            <strong id="helloWorld" class="gold">helloWorld.js</strong>. I have since received certification for Front-End Development, and am continuing my education
+            in the Back-End and Full-Stack Development courses at Codecademy.
             <br><br>
-            I decided to look into some free online coding classes, and it was love at first
-            <strong id="helloWorld" class="gold">helloWorld.js</strong>. I began on KhanAcademy, before exhausting those resources and migrating to 
-            Codecademy, where I enrolled in the Pro courses, exited my full time job, and earned certificates in pursuit of my career in programming.`));
+
+            I love learning, taking on challenges, and creating solutions. My goal is to work in a team-based environment to further develop and sharpen my skills.
+            I am open to in-person roles in NW Ohio and SE Michigan, as well as remote positions.
+            `));
         }
 
 
