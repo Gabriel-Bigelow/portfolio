@@ -6,6 +6,20 @@
     padding: 2rem;
 }
 
+#contact-links-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#contact-links-container img {
+    height: 6rem;
+}
+
+#github-link {
+    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(153deg) brightness(154%) contrast(104%);
+}
+
 input, #message {
     background-color: hsla(217, 20%, 20%, 0.5);
     color: hsla(217, 60%, 90%, 1);

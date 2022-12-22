@@ -11,6 +11,9 @@ import './contact.css';
 
 import arrow from '../../images/arrow.svg';
 import gitbash from '../../images/git-bash.svg';
+import github from '../../images/skills/github.svg';
+import gmail from '../../images/skills/gmail.svg';
+import linkedin from '../../images/skills/linkedin.svg';
 
 const serviceID = 'service_0yiyk7z';
 const templateID = 'template_s1lbpub';
@@ -57,7 +60,7 @@ export default function Contact () {
     }, [section, body, dispatch]);
 
     return (
-
+        //https://www.linkedin.com/messaging/thread/new/?recipients=List(urn%3Ali%3Afsd_profile%3AACoAACWc9xwBrd2stovrFMdgwJOfUlADr7FDEgk)&composeOptionType=CONNECTION_MESSAGE&controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=L1i06rbSRketguxugfjmUg%3D%3D
 
 
         <section id="contact">        
@@ -70,6 +73,11 @@ export default function Contact () {
                         <h2 id="contact-title"> </h2>
                         <p id="contact-body"> </p>
 
+                        <div id="contact-links-container">
+                            <a href="https://www.linkedin.com/in/gabriel-bigelow-b37b24232/"><img id="linkedin-link" src={linkedin} alt="LinkedIn" /></a>
+                            <a href="mailto:gabrielbigelow.code@gmail.com"><img id="gmail-link" src={gmail} alt="GitHub" /></a>
+                            <a href="https://github.com/Gabriel-Bigelow"><img id="github-link" src={github} alt="GitHub" /></a>
+                        </div>
 
                         <div id="contact-form-container">
                             <form id="contact-form" ref={form} onSubmit={sendEmail}>
