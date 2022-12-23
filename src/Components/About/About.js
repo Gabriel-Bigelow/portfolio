@@ -75,7 +75,7 @@ export default function About () {
                     <div id="terminal-background"></div>
                     <div id="side-images">
                         <img className="side-image" src={headshot} alt="A nice, handsome young man"/>
-                        <a href={resume} target="_blank"><img className="side-image" id="resume-logo" src={resumeLogo} /></a>
+                        <a href={resume} target="_blank" rel="noreferrer"><img className="side-image" id="resume-logo" src={resumeLogo} alt="Gabriel Bigelow's resume link"/></a>
                     </div>
                     <div id="top-frame"><img src={gitbash} alt="gitbash" /><p>MINGW64:/gb/portfolio/{section}</p></div>
                     <div id="terminal-output">
