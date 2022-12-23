@@ -60,10 +60,11 @@ export default function Projects () {
     function handleClick ({target}) {
         //enlarge and focus the element that is moused over, and display the full project container, if it is a project
         //else unfocus any focused projects
-        if (!(selectedProject && target.id.includes(selectedProject)) || !(selectedProject && target.parentElement.id.includes(selectedProject))) {
-            selectedProject = target.parentElement.id.includes('container') ? target.parentElement.id.slice(0, target.parentElement.id.length - 10) : undefined;
+        if (target.parentElement.id.includes('container')) {
+            selectedProject = target.parentElement.id.slice(0, target.parentElement.id.length - 10);
+        } else if (selectedProject && !target.parentElement.id.includes(selectedProject)) {
+            selectedProject = undefined;
         }
-        
         
         const containers = document.getElementsByClassName('project');
         const longs = document.getElementsByClassName('project-long');
