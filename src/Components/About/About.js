@@ -50,7 +50,7 @@ export default function About () {
             I discovered my enthusiasm for programming in the summer of 2021 while helping my brother start a business,
             in which we had regular contact with web developers. Having always loved computers and technology, I decided to look into online coding classes, and it was love at first
             <strong id="helloWorld" class="gold">helloWorld.js</strong>. I have since received certification for Front-End Development, and am continuing my education
-            in the Back-End and Full-Stack Development courses at Codecademy.
+            with the Back-End and Full-Stack Development courses at Codecademy.
             <br><br>
 
             I love learning, taking on challenges, and creating solutions. My goal is to work in a team-based environment to further develop and sharpen my skills.
