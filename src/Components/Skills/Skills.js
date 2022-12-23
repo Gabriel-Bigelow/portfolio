@@ -52,6 +52,8 @@ export default function Skills () {
                 </ul></li>
             <li><span class="list-header">Development Tools and Skills</span><ul>
                 <li>Visual Studio Code</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Premiere Pro</li>
                 <li>Node Package Manager</li>
                 <li>Chrome Dev Tools</li>
                 <li>Git & GitHub</li>
