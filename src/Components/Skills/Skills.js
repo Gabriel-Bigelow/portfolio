@@ -44,12 +44,14 @@ export default function Skills () {
                     <li>JavaScript (vanilla, React, Redux)</li>
                     <li>HTML</li>
                     <li>CSS</li>
-                </ul></li>
+                </ul>
+            </li>
             <li><span class="list-header">Back-End</span><ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
                     <li>PostgreSQL</li>
-                </ul></li>
+                </ul>
+            </li>
             <li><span class="list-header">Development Tools and Skills</span><ul>
                 <li>Visual Studio Code</li>
                 <li>Adobe Photoshop</li>
@@ -60,7 +62,8 @@ export default function Skills () {
                 <li>Postman</li>
                 <li>Postbird</li>
                 <li>Accessibility</li>
-                </ul></li>
+                </ul>
+            </li>
         </ul>
         `))
 

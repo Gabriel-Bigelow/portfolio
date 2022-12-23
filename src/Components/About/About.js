@@ -9,6 +9,8 @@ import arrow from '../../images/arrow.svg'
 import gitbash from '../../images/git-bash.svg';
 import cert from '../../images/about/certification.webp';
 import headshot from '../../images/about/headshot.webp';
+import resumeLogo from '../../images/about/resumeLogo.webp';
+import resume from './resume.pdf'
 
 //function to add some props / styling to "helloWorld.js" strong element after it renders.
 function afterOutput() {
@@ -71,8 +73,9 @@ export default function About () {
             <div className="section-body">
                 <div id="terminal">
                     <div id="terminal-background"></div>
-                    <div id="headshot">
-                        <img className="terminal-image" src={headshot} alt="A nice, handsome young man"/>
+                    <div id="side-images">
+                        <img className="side-image" src={headshot} alt="A nice, handsome young man"/>
+                        <a href={resume} target="_blank"><img className="side-image" id="resume-logo" src={resumeLogo} /></a>
                     </div>
                     <div id="top-frame"><img src={gitbash} alt="gitbash" /><p>MINGW64:/gb/portfolio/{section}</p></div>
                     <div id="terminal-output">

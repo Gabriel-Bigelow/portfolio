@@ -37,14 +37,6 @@ section {
     min-height: 230px;
 }
 
-#terminal #headshot {
-    grid-column: 1;
-    grid-row: 1;
-    z-index: 0;
-    width: 80%;
-    padding: 50px 30px;
-}
-
 #terminal #top-frame {
     position: absolute;
     display: grid;
@@ -81,7 +73,7 @@ section {
     position:relative;
     grid-row: 1;
     grid-column: 2;
-    padding: 30px;
+    padding: 1.75rem;
 }
 
 #terminal-output p {
