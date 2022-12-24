@@ -36,6 +36,7 @@ The purpose of my portfolio is tell the user a little bit about me and my favori
 
 ### Testing
 * Chrome Dev Tools
+* Lighthouse
 
 ### Version Control
 * Git
@@ -99,6 +100,25 @@ Layout responsiveness was tested for the following devices with Chrome Dev Tools
     <li>Nest Hub</li>
     <li>Nest Hub Max</li>
 </ul>
+
+Lighthouse test scores as of December 23, 2022:
+    <ul>
+        <li> Desktop 
+            <ul>
+                <li>Performance: 93</li>
+                <li>Accessibility: 97</li>
+                <li>Best Practices: 92</li>
+                <li>SEO: 100</li>
+            </ul>
+        <li>Mobile
+            <ul>
+                <li>Performance: 64</li>
+                <li>Accessibility: 97</li>
+                <li>Best Practices: 92</li>
+                <li>SEO: 100</li>
+            </ul>
+        </li>
+    </ul>
 
 ## References
 ***
