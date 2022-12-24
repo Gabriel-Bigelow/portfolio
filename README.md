@@ -14,43 +14,19 @@ My portfolio is a multi-page application, built with the React library.
 
 ## Technologies
 
-* HTML
-* CSS
-* Javascript
-* React
-* Redux
-* React-Router
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Languages
+<ul> 
+    <li>JavaScript
+        <ul>
+            <li>React</li>
+            <li>React Router</li>
+            <li>Redux</li>
+            <li>EmailJS</li>
+        </ul>
+    </li>
+    <li>HTML</li>
+    <li>CSS</li>
+</ul>
 
 
 
