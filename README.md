@@ -34,6 +34,9 @@ The purpose of my portfolio is tell the user a little bit about me and my favori
     <li>CSS</li>
 </ul>
 
+### Testing
+* Chrome Dev Tools
+
 ### Version Control
 * Git
 * GitHub
@@ -74,6 +77,28 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
+## Testing
+***
+This project was tested manually with Chrome Dev tools on Windows 10 and Safari on an iPhone 12 (iOS 16.0).
+
+Layout responsiveness was tested for the following devices with Chrome Dev Tools
+<ul>
+    <li>iPhone SE</li>
+    <li>iPhone XR</li>
+    <li>iPhone 12 Pro</li>
+    <li>Pixel 5</li>
+    <li>Samsung Galaxy S8+</li>
+    <li>Samsung Galaxy S20 Ultra</li>
+    <li>iPad Air</li>
+    <li>iPad Mini</li>
+    <li>Surface Pro 7</li>
+    <li>Surface Duo</li>
+    <li>Galaxy Fold</li>
+    <li>Samsung Galaxy A51/71</li>
+    <li>Nest Hub</li>
+    <li>Nest Hub Max</li>
+</ul>
 
 ## References
 ***

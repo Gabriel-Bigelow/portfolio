@@ -15,15 +15,14 @@ section {
 
 #terminal #topFrame img, .terminal-image {
     width: 100%;
-    max-width:600px;
+    max-width: 37.5rem;
     height: auto;
 }
 
 
 .section-body {
     width: 80%;
-    min-height: 200px;
-    
+    min-height: 12.5rem;
     grid-column: 2;
     display: grid;
 }
@@ -34,40 +33,40 @@ section {
     position: relative;
     grid-template: auto /  20% minMax(80%, 80%);
     justify-content: center;
-    min-height: 230px;
+    min-height: 14.375rem;
 }
 
 #terminal #top-frame {
     position: absolute;
     display: grid;
-    grid-template: 30px / 30px 1fr 1fr;
+    grid-template: 1.875rem / 1.875rem 1fr 1fr;
     grid-column: 1 / span 2;
     top:0;
     left: 0;
     width: 100%;
-    height: 30px;
+    height: 1.875rem;
     background-color:rgba(22, 27, 54, 0.8);
     align-items: center;
 }
 #top-frame p {
-    margin: 0 10px;
+    margin: 0 .625rem;
     color:hsla(217, 60%, 80%);
     font-size: 0.9rem;
     width: 100%;
 }
 #top-frame img {
-    height: 18px;
-    margin-left: 5px;
+    height: 1.125rem;
+    margin-left: 0.3125rem;
 }
 
 #terminal-background {
     position: relative;
-    border: solid 2px hsla(217, 60%, 60%, 0.5);
+    border: solid 0.125rem hsla(217, 60%, 60%, 0.5);
     background-color: rgba(20, 20, 20, 0.7);
     width: 100%;
     grid-row: 1;
     grid-column: 1 / span 2;
-    filter: blur(5px);
+    filter: blur(0.3125rem);
 }
 #terminal-output {
     position:relative;

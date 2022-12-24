@@ -21,7 +21,7 @@ export function animateHome () {
         document.getElementById('hae-center').style.opacity = 1;
     }
     if (runTime === 1.3) {
-        document.getElementById('hae2').style.marginTop = '20px';
+        document.getElementById('hae2').style.marginTop = '1.25rem';
     }
     if (runTime === 1.5) {
         document.getElementById('hae-right').style.opacity = 1;

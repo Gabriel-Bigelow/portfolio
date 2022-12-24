@@ -4,6 +4,18 @@
     }
 }
 
+@media only screen and (min-width: 2560px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 3600px) {
+    html {
+        font-size: 32px;
+    }
+}
+
 
 
 @font-face {
@@ -67,15 +79,15 @@
 }
 
 .blur5 {
-    filter: blur(5px);
+    filter: blur(.3125rem);
 }
 
 .blur10 {
-    filter: blur(10px);
+    filter: blur(.625rem);
 }
 
 .blur20 {
-    filter: blur(20px);
+    filter: blur(1.25rem);
 }
 
 

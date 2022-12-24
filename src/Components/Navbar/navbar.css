@@ -1,6 +1,6 @@
 #navbar {
     position: relative;
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -18,7 +18,7 @@
 #logo-container {
     height: 100%;
     font-size: 2rem;
-    line-height: 40px;
+    line-height: 2.5rem;
     font-family: oswald;
     white-space: nowrap;
     margin-right: 1rem;
@@ -29,7 +29,7 @@
 #navbar ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 1.875rem;
     padding: 0;
     list-style-type: none;
     align-items: center;

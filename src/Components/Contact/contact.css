@@ -24,7 +24,7 @@ input, #message {
     background-color: hsla(217, 20%, 20%, 0.5);
     color: hsla(217, 60%, 90%, 1);
     padding: 1rem;
-    border: 1px solid hsla(217, 80%, 80%, 0.5);
+    border: .0625rem solid hsla(217, 80%, 80%, 0.5);
     border-radius: 0.5rem;
     font-size: 1rem;
     font-family: 'Nunito Sans';
@@ -36,7 +36,7 @@ input::placeholder, #message::placeholder {
 
 input:focus, #message:focus {
     outline: none;
-    border: 2px solid hsla(217, 100%, 80%, 1);
+    border: .125rem solid hsla(217, 100%, 80%, 1);
 }
 
 #message {

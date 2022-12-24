@@ -36,7 +36,7 @@
 
 #skills-container {
     display: grid;
-    height: 200px;
+    height: 12.5rem;
     width: 100%;
     grid-template: 1fr 1fr / 1fr;
     gap: 3rem;
