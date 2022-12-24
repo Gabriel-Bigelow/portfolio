@@ -7,18 +7,18 @@ To see a live deploy of this project, visit https://gabriel-bigelow.netlify.app.
 My portfolio is a multi-page application, built with the React library.
 
 ## Purpose 
-***
+
 The purpose of my portfolio is tell the user a little bit about me and my favorite projects, as well as give the appropriate avenues to contact me.
 
 ## Features
-***
+
 * Landing page: My welcome page, describing me as a software developer with some animations and graphics
 * About Me page: A brief description of me, my qualifications, and my goals as a front-end developer.
 * Projects page: A page dedicated to highlighting my favorite projects.
 * Skills page: A brief overview of my skills and the technologies that I regularly use.
 
 ## Technologies
-***
+
 
 ### Languages
 <ul> 
@@ -47,7 +47,7 @@ The purpose of my portfolio is tell the user a little bit about me and my favori
 * Netlify
 
 ## Available Scripts
-***
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -80,7 +80,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 
 ## Testing
-***
+
 This project was tested manually with Chrome Dev tools on Windows 10 and Safari on an iPhone 12 (iOS 16.0).
 
 Layout responsiveness was tested for the following devices with Chrome Dev Tools
@@ -121,7 +121,7 @@ Lighthouse test scores as of December 23, 2022:
     </ul>
 
 ## References
-***
+
 
 https://reactjs.org/
 
