@@ -112,7 +112,7 @@ Lighthouse test scores as of December 23, 2022:
             </ul>
         <li>Mobile
             <ul>
-                <li>Performance: 64</li>
+                <li>Performance: 81</li>
                 <li>Accessibility: 97</li>
                 <li>Best Practices: 92</li>
                 <li>SEO: 100</li>
