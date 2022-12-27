@@ -60,9 +60,6 @@ export default function Contact () {
     }, [section, body, dispatch]);
 
     return (
-        //https://www.linkedin.com/messaging/thread/new/?recipients=List(urn%3Ali%3Afsd_profile%3AACoAACWc9xwBrd2stovrFMdgwJOfUlADr7FDEgk)&composeOptionType=CONNECTION_MESSAGE&controlUrn=topcard_primary_compose_message_button&referringModuleKey=NON_SELF_PROFILE_VIEW&messageComposeFlowTrackingId=L1i06rbSRketguxugfjmUg%3D%3D
-
-
         <section id="contact">        
             <img className="left-arrow" id="left" src={arrow} alt="navigate left" to="/skills" onClick={handleNavigation} />
             <div className="section-body">

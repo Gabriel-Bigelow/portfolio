@@ -10,6 +10,8 @@ import lurker from '../../images/projects/lurker.webp';
 import lurkerVid from '../../images/projects/lurkerVid.webm';
 import superBallMania from '../../images/projects/superBallMania.webp';
 import superBallManiaVid from '../../images/projects/superBallManiaVid.webm';
+import jammming from '../../images/projects/jammming.webp';
+import jammmingVid from '../../images/projects/jammmingVid.mp4';
 
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 import { useNavigate } from "react-router";
@@ -196,7 +198,8 @@ export default function Projects () {
 
     useEffect(() => {
         dispatch(setSection('Projects'));
-        dispatch(setBodyText(`Here are some of my favorite projects:`))
+        dispatch(setBodyText(`My favorite projects always involve challenging myself, 
+        because they make me a better developer and scratch my itch for learning. <br><br> Here are some of my favorite projects:`))
 
         if (section === 'Projects' && body.length > 0) {
             setTimeout(() => {
@@ -297,10 +300,38 @@ export default function Projects () {
                                 <a className="satblue" href="https://github.com/Gabriel-Bigelow/super-ball-mania">Here is a link to the GitHub repository!</a>
                                 
                             <p>
-                                This was one of my favorite projects because it was my first experience releasing a product to a considerable userbase. This taught me several things, such as the importance
+                                This was one of my favorite projects because it was my first experience releasing a product to a considerable userbase. It involves something that I'm passionate about: videogames! This taught me several things, such as the importance
                                 of thoroughly testing edge cases in your code before release, how to use software packagers, bundlers, and push that software to an external database.
                                 I had a lot of fun squashing bugs for my users and ensuring that their experience with my product was a pleasant one, whether those bugs were brought to my attention by
                                 direct messages, comments, or my own personal testing.
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="project" id="jammming-container" onMouseOver={handleMouseOver}>
+                        <div className="project-cover" id="jammming"></div>
+                        <video className="project-video" id="jammming-video" loop>
+                            <source src={jammmingVid}></source>
+                        </video>
+                        <img className="project-image" id="jammming-image" alt="Super Ball Mania project preview" src={jammming}/>
+                        <h3 className="project-title" id="jammming-title">Jammming</h3>
+                        <h4 className="project-short" id="jammming-short">Jammming is a playlist generating app written using
+                        React native, HTML, CSS, and the Spotify API.</h4>
+                        <div className="project-long" id="jammming-long">
+                            <p> Jammmming is a single-page application written with React, that takes advantage of the Spotify API to handle playlist creation, cloning, and deletion.
+                                When a user first visits Jammming, they will be prompted to authorize the application to make changes to their Spotify account, so that it can pull their
+                                current playlists, in order to update, clone, or delete them, as well as add brand-new playlists.
+                                </p>
+                                <a className="satblue" href="https://jammming-to-music.netlify.app/">Check it out here!</a>
+                                <br></br>                                
+                                <a className="satblue" href="https://github.com/Gabriel-Bigelow/jammming">Here is a link to the GitHub repository!</a>
+                            <p>
+                                This was one of my favorite projects because it was my first experience creating an with API integration, as well as OAuth2 authentication. Although initially challenging,
+                                it taught me many things throughout, such as how to read API documentation, as well as how to work with authentication. 
                                 <br></br>
                                 <br></br>
                                 <br></br>

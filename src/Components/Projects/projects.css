@@ -44,7 +44,11 @@
     transition-duration: 0.5s;
 }
 
-.project video {
+.project-video, .project-image {
+    max-width: 900px;
+}
+
+.project-video {
     grid-column: 1;
     grid-row: 1;
     z-index: 0;
