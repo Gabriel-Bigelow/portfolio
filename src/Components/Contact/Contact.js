@@ -71,9 +71,9 @@ export default function Contact () {
                         <p id="contact-body"> </p>
 
                         <div id="contact-links-container">
-                            <a href="https://www.linkedin.com/in/gabriel-bigelow-b37b24232/"><img id="linkedin-link" src={linkedin} alt="LinkedIn" /></a>
+                            <a href="https://www.linkedin.com/in/gabriel-bigelow-b37b24232/" target="_blank"><img id="linkedin-link" src={linkedin} alt="LinkedIn" /></a>
                             <a href="mailto:gabriel@gabrielbigelow.com"><img id="gmail-link" src={gmail} alt="GitHub" /></a>
-                            <a href="https://github.com/Gabriel-Bigelow"><img id="github-link" src={github} alt="GitHub" /></a>
+                            <a href="https://github.com/Gabriel-Bigelow" target="_blank"><img id="github-link" src={github} alt="GitHub" /></a>
                         </div>
 
                         <div id="contact-form-container">
