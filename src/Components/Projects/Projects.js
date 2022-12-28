@@ -17,6 +17,16 @@ import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../fu
 import { useNavigate } from "react-router";
 
 
+function closeButton () {
+    document.getElementById('favorite-projects').style.flexWrap = 'nowrap';
+
+    document.getElementById('close-button').style.opacity = 0;
+    setTimeout(() => {
+        document.getElementById('close-button').style.display = 'none';
+    }, 500)
+    
+}
+
 export default function Projects () {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -76,6 +86,12 @@ export default function Projects () {
         
         if (selectedProject) {
             const targetLong = document.getElementById(`${selectedProject}-long`);
+
+            document.getElementById('close-button').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('close-button').style.opacity = '1';
+            }, 500)
+            
 
 
             for (let container of containers) {
@@ -138,7 +154,9 @@ export default function Projects () {
                 }
             }
         } else {
-            document.getElementById('favorite-projects').style.flexWrap = 'nowrap';
+            
+            closeButton();
+
             for (let container of containers) {
                 container.style.width = '100%';
             }
@@ -227,6 +245,7 @@ export default function Projects () {
                 </div>
 
                 <div id="favorite-projects">
+                    <button id="close-button">Hide Project Details</button>
 
                     <div className="project" id="lurker-container" onMouseOver={handleMouseOver}>
                         <div className="project-cover" id="lurker"></div>
