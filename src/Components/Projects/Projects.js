@@ -18,13 +18,15 @@ import { useNavigate } from "react-router";
 
 
 function closeButton () {
+    const closeButtons = document.getElementsByClassName('close-button');
     document.getElementById('favorite-projects').style.flexWrap = 'nowrap';
 
-    document.getElementById('close-button').style.opacity = 0;
-    setTimeout(() => {
-        document.getElementById('close-button').style.display = 'none';
-    }, 500)
-    
+    for (let closeButton of closeButtons) {
+        closeButton.style.opacity = 0;
+        setTimeout(() => {
+            closeButton.style.display = 'none';
+        }, 500)
+    }
 }
 
 export default function Projects () {
@@ -87,10 +89,13 @@ export default function Projects () {
         if (selectedProject) {
             const targetLong = document.getElementById(`${selectedProject}-long`);
 
-            document.getElementById('close-button').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('close-button').style.opacity = '1';
-            }, 500)
+            const closeButtons = document.getElementsByClassName('close-button');
+            for (let closeButton of closeButtons) {
+                closeButton.style.display = 'block';
+                setTimeout(() => {
+                    closeButton.style.opacity = 1;
+                }, 500)
+            }
             
 
 
@@ -154,7 +159,6 @@ export default function Projects () {
                 }
             }
         } else {
-            
             closeButton();
 
             for (let container of containers) {
@@ -245,7 +249,8 @@ export default function Projects () {
                 </div>
 
                 <div id="favorite-projects">
-                    <button id="close-button">Hide Project Details</button>
+                    <button className="close-button" id="close-button-1">X</button>
+                    <button className="close-button" id="close-button-2">Hide Project Details</button>
 
                     <div className="project" id="lurker-container" onMouseOver={handleMouseOver}>
                         <div className="project-cover" id="lurker"></div>

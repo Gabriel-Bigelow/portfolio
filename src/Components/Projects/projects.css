@@ -11,27 +11,35 @@
     margin-top: 2rem;
 }
 
-#close-button {
-    display: block;
+.close-button {
+    display: none;
     position: absolute;
     font-size: 1rem;
     font-weight: 600;
     z-index: 100;
-    right: 0;
-    bottom: 1rem;
     padding: 1rem;
     color: lightgray;
-    background-color: hsla(217, 60%, 5%, 0.5);
+    background-color: hsla(217, 60%, 25%, 0.5);
     border: none;
     border-radius: 1rem;
     transition-duration: 0.1s;
 }
 
-#close-button:hover {
+#close-button-1 {
+    right: -3rem;
+    top: 0;
+}
+
+#close-button-2 {
+    right: 0;
+    bottom: 1rem;
+}
+
+.close-button:hover {
     color: white;
     cursor: pointer;
-    background-color: hsla(217, 60%, 10%, 0.8);
-    filter: drop-shadow(0 0 .5rem hsla(217, 60%, 30%, 0.8))
+    background-color: hsla(217, 60%, 20%, 0.8);
+    filter: drop-shadow(0 0 .5rem hsla(217, 60%, 35%, 0.8))
 }
 
 #favorite-projects video {
