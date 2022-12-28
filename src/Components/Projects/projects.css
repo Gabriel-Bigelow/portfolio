@@ -1,7 +1,9 @@
-#favorite-projects {
+#all-projects {
+    display: grid;
+}
+
+.favorite-projects {
     position: relative;
-    grid-row: 2;
-    grid-column: 1;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -10,6 +12,11 @@
     height: 100%;
     margin-top: 2rem;
     margin-bottom: 3rem;
+}
+
+#other-projects {
+    display: flex;
+    width: 100%;
 }
 
 .close-button {
@@ -43,7 +50,7 @@
     filter: drop-shadow(0 0 .5rem hsla(217, 60%, 35%, 0.8))
 }
 
-#favorite-projects video {
+.favorite-projects video {
     width: 20%;
     transition-duration: 0.5s;
 }
@@ -95,6 +102,7 @@
 
 .project-title {
     opacity: 0;
+    font-size: 0px;
     transition-duration: 0.2s;
 }
 
@@ -102,14 +110,16 @@
     text-align: center;
     opacity: 0;
     transition-duration: 0.2s;
+    font-size: 0;
 }
 
 .project-long {
     display: none;
     justify-items: center;
+    font-size: 0;
     opacity: 0;
-    transition-duration: 0.3s;
     padding-bottom: 3rem 0;
+    transition-duration: 0.3s;
 }
 .project-long a {
     display: block;
