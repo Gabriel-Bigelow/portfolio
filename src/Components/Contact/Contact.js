@@ -91,6 +91,5 @@ export default function Contact () {
 
             <img className="right-arrow" id="right" src={arrow} alt="navigate right" to="/" onClick={handleNavigation} />
         </section>
-        
     );
 }
