@@ -28,6 +28,18 @@ function closeProject () {
 }
 
 
+function closeButton () {
+    const closeButtons = document.getElementsByClassName('close-button');
+    document.getElementById('favorite-projects').style.flexWrap = 'nowrap';
+
+    for (let closeButton of closeButtons) {
+        closeButton.style.opacity = 0;
+        setTimeout(() => {
+            closeButton.style.display = 'none';
+        }, 500)
+    }
+}
+
 export default function Projects () {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -93,6 +105,15 @@ export default function Projects () {
             
             const targetLong = document.getElementById(`${selectedProject}-long`);
 
+            const closeButtons = document.getElementsByClassName('close-button');
+            for (let closeButton of closeButtons) {
+                closeButton.style.display = 'block';
+                setTimeout(() => {
+                    closeButton.style.opacity = 1;
+                }, 500)
+            }
+            
+
 
 
             for (let container of containers) {
@@ -157,9 +178,8 @@ export default function Projects () {
                 }
             }
         } else {
-            closeProject();
+            closeButton();
 
-            //reset all projects back to symmetric sizes
             for (let container of containers) {
                 container.style.width = '100%';
             }
@@ -247,8 +267,10 @@ export default function Projects () {
                     </div>
                 </div>
 
-                <div className="favorite-projects">
-                    <button id="close-button" onClick={closeProject}>Hide Project Details</button>
+                <div id="favorite-projects">
+                    <button className="close-button" id="close-button-1">X</button>
+                    <button className="close-button" id="close-button-2">Hide Project Details</button>
+
                     <div className="project" id="lurker-container" onMouseOver={handleMouseOver}>
                         <div className="project-cover" id="lurker"></div>
                         <video className="project-video" id="lurker-video" loop>
