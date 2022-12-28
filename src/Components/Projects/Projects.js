@@ -16,17 +16,6 @@ import jammmingVid from '../../images/projects/jammmingVid.mp4';
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 import { useNavigate } from "react-router";
 
-function closeProject () {
-    const projectsContainer = document.getElementsByClassName('favorite-projects');
-    for (let container of projectsContainer) {
-        container.style.flexWrap = 'nowrap';
-    }
-    document.getElementById('close-button').style.opacity = 0;
-    setTimeout(() => {
-        document.getElementById('close-button').style.display = 'none';
-    }, 500);
-}
-
 
 function closeButton () {
     const closeButtons = document.getElementsByClassName('close-button');
@@ -98,11 +87,7 @@ export default function Projects () {
         const shorts = document.getElementsByClassName('project-short');
         
         if (selectedProject) {
-            document.getElementById('close-button').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('close-button').style.opacity = 1;
-            }, 1);
-            
+
             const targetLong = document.getElementById(`${selectedProject}-long`);
 
             const closeButtons = document.getElementsByClassName('close-button');
@@ -384,58 +369,6 @@ export default function Projects () {
                     </div>
 
                     
-                </div>
-
-                <div className="favorite-projects">
-                    <button id="close-button" onClick={closeProject}>Hide Project Details</button>
-
-
-                    <div className="project" id="flash-cards-container" onMouseOver={handleMouseOver}>
-                        <div className="project-cover" id="flash-cards"></div>
-                        <video className="project-video" id="flash-cards-video" loop>
-                            <source src={lurkerVid}></source>
-                        </video>
-                        <img className="project-image" id="flash-cards-image" alt="flash-cards project preview" src={lurker}/>
-                        <h3 className="project-title" id="flash-cards-title">Flash Cards</h3>
-                        <h4 className="project-short" id="flash-cards-short">Flash Cards is a React app that uses the Reddit API to 
-                        create a streamlined "flash-cards" version of Reddit, enhancing user experience by removing unessential elements.</h4>
-                        <div className="project-long" id="flash-cards-long">
-                            <p>flash-cards is Reddit clone built with React/Redux that forgoes all the unneccessary elements of the main Reddit site that a "flash-cards" would not need. By narrowing
-                                down the displayed content to only posts, upvotes, comments, and a subreddit list, the user has a much more streamlined and content-focused experience with Reddit.
-                                Users can still browse Reddit in the exact same way that they normally would, sans advertisements and all the buttons and features that the majority of users rarely access,
-                                such as posting, commenting, account settings, etc..
-                            </p>
-                            <p>Users can still browse Reddit in the exact same way they would on the main site, as the data is displayed in the same fashion that they are used to, with improvements:</p>
-                            <ul id="flash-cards-list">
-                                <li>Initial load times are noticeably better.</li>
-                                <li>Night Mode (dark theme) is built directly into the navigation bar for late-night browsing.</li>
-                                <li>The default popular Subreddit bar shows the top 25 most subscribed-to Subreddits, rather than an arbitrary list of subreddits.</li>                    
-                                <li>All posts are preloaded with top comments and rendered along with the post, so they can be accessed and read without having to navigate to a separate page, or open a new tab, decreasing overall load times, and user experience by removing the need to load an entirely new page and then scroll down to the comments.</li>
-                                <li>Text posts show up to 3 top comments by default, to increase the content of a text post (such as an AskReddit thread), without the need for user interaction.</li>
-                                <li>Image posts can be enlarged without navigating to a new page.</li>
-                                <li>Image gallery posts can be accessed without navigating to a new page.</li>
-                                <li>All video posts can be accessed without navigating to a new page.</li>
-                                <li>Hyperlink posts access the website directly from the post container, given abiding XSS permissions.</li>
-                                <li>Navigating to different areas of the site is much more seamless, with the current page not changing to the next page until the next page is loaded.</li>
-                                <li>Subreddits can be accessed directly from a post, without the need to load another page.</li>
-                                <li>The search function can be used to find posts with a single input.</li>
-                            </ul>
-                            <a className="satblue" href="https://reddit-flash-cards.netlify.app/">See flash-cards in action here!</a> 
-                            <br></br>
-
-                            <a className="satblue" href="https://github.com/Gabriel-Bigelow/reddit-client">Check out flash-cards's GitHub repository.</a>
-                            <p>This was one of my favorite projects because it improved upon a product that I already enjoy. It also helped me solidify my understanding of React and Redux, as 
-                                well as a working with APIs. Along with bettering my skills in React/Redux, I communicated regularly with a peer that was building a similar website, in which we helped each other
-                                talk through the problems we were having, and point out bugs to each other. Throughout this communication and production process, I learned a great deal about structuring a project, effectively communicating
-                                ideas to a peer, time management, and efficient programming.
-                                Overall, it was a pleasant preview of what it is like to work in a team, which I'm very excited for.
-                            </p>
-                            <br></br>
-                            <br></br>
-                        </div>
-                    </div>
-
-
                 </div>
 
                 
