@@ -7,9 +7,9 @@ import "./projects.css";
 import arrow from '../../images/arrow.svg'
 import gitbash from '../../images/git-bash.svg';
 import lurker from '../../images/projects/lurker.webp';
-import lurkerVid from '../../images/projects/lurkerVid.webm';
+import lurkerVid from '../../images/projects/lurkerVid.mp4';
 import superBallMania from '../../images/projects/superBallMania.webp';
-import superBallManiaVid from '../../images/projects/superBallManiaVid.webm';
+import superBallManiaVid from '../../images/projects/superBallManiaVid.mp4';
 import jammming from '../../images/projects/jammming.webp';
 import jammmingVid from '../../images/projects/jammmingVid.mp4';
 
@@ -382,10 +382,9 @@ export default function Projects () {
                             </video>
                             <img className="project-image" id="flash-cards-image" alt="Super Ball Mania project preview" src={jammming}/>
                             <h3 className="project-title" id="flash-cards-title">Flash Cards</h3>
-                            <h4 className="project-short" id="flash-cards-short">Jammming is a playlist generating app written using
-                            React native, HTML, CSS, and the Spotify API.</h4>
+                            <h4 className="project-short" id="flash-cards-short">Flash Cards is an study app built with React/Redux</h4>
                             <div className="project-long" id="flash-cards-long">
-                                <p> Jammmming is a single-page application written with React, that takes advantage of the Spotify API to handle playlist creation, cloning, and deletion.
+                                <p>Flash Cards is a multi-page application written with React, that takes advantage of the Spotify API to handle playlist creation, cloning, and deletion.
                                     When a user first visits Jammming, they will be prompted to authorize the application to make changes to their Spotify account, so that it can pull their
                                     current playlists, in order to update, clone, or delete them, as well as add brand-new playlists, based on user actions.
                                     </p>
