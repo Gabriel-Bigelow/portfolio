@@ -78,12 +78,13 @@ export default function Projects () {
     function handleClick ({target}) {
         //enlarge and focus the element that is moused over, and display the full project container, if it is a project
         //else unfocus any focused projects
+
         if (target.parentElement.id.includes('container')) {
             selectedProject = target.parentElement.id.slice(0, target.parentElement.id.length - 10);
         } else if (selectedProject && !target.parentElement.id.includes(selectedProject)) {
             selectedProject = undefined;
         }
-        
+
         const containers = document.getElementsByClassName('project');
         const longs = document.getElementsByClassName('project-long');
         const videos = document.getElementsByClassName('project-video');
@@ -91,8 +92,11 @@ export default function Projects () {
         const shorts = document.getElementsByClassName('project-short');
         
         if (selectedProject) {
-
             const targetLong = document.getElementById(`${selectedProject}-long`);
+
+            for (let children of targetLong.childNodes) {
+                children.style.fontSize = '1rem';
+            }
 
             const closeButtons = document.getElementsByClassName('close-button');
             for (let closeButton of closeButtons) {
@@ -148,7 +152,6 @@ export default function Projects () {
                 }
             }
 
-            
             if (targetLong) {
                 targetLong.style.display = 'grid';
                 setTimeout(() => {
@@ -314,7 +317,7 @@ export default function Projects () {
                             <h4 className="project-short" id="google-flash-cards-short">Google Flash Cards is a study app that utilizes the Google API to access Google Docs and store saved Flash Cards data to your Google Drive, 
                                     so that you can create and use your custom study guides wherever you go.</h4>
                             <div className="project-long" id="google-flash-cards-long">
-                            <iframe width="70%" height="300" src="https://www.youtube.com/embed/xR3WueEZjko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="70%" height="300" src="https://www.youtube.com/embed/xR3WueEZjko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
                                 <p> Google Flash Cards IS useable without logging in, but the created Topics, Quizzes, and flash cards will be lost if a user does not 
                                     connect Google Flash Cards to their Google Account and leaves the app's webpage. Upon first login to Google Flash Cards, the app 
                                     will check to see if a Flash Cards app - Saved Data document appears on a user's Google Drive account. If it does not, one will be 
@@ -327,9 +330,9 @@ export default function Projects () {
 
                                 </p>
 
-                                <a className="satblue" href="https://other-to-music.netlify.app/">Check it out here!</a>
+                                <a className="satblue" href="https://google-flash-cards.netlify.app/">Check it out here!</a>
                                 <br></br>                                
-                                <a className="satblue" href="https://github.com/Gabriel-Bigelow/jammming">Here is a link to the GitHub repository!</a>
+                                <a className="satblue" href="https://github.com/Gabriel-Bigelow/google-flash-cards">Here is a link to the GitHub repository!</a>
                                 <p>
                                     This is one of my favorite projects because it is a helpful tool to study and quiz yourself on any topic you want, and the saved data persists across
                                     can be accessed from anywhere in the world with an internet connection. I like to use my app to study up on programming terms and definitions, as well as practice 
