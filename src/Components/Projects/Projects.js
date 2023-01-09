@@ -317,7 +317,7 @@ export default function Projects () {
                             <h4 className="project-short" id="google-flash-cards-short">Google Flash Cards is a study app that utilizes the Google API to access Google Docs and store saved Flash Cards data to your Google Drive, 
                                     so that you can create and use your custom study guides wherever you go.</h4>
                             <div className="project-long" id="google-flash-cards-long">
-                            <iframe width="70%" height="300" src="https://www.youtube.com/embed/xR3WueEZjko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+                            <iframe width="70%" height="300" src="https://www.youtube.com/embed/xR3WueEZjko" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 <p> Google Flash Cards IS useable without logging in, but the created Topics, Quizzes, and flash cards will be lost if a user does not 
                                     connect Google Flash Cards to their Google Account and leaves the app's webpage. Upon first login to Google Flash Cards, the app 
                                     will check to see if a Flash Cards app - Saved Data document appears on a user's Google Drive account. If it does not, one will be 
