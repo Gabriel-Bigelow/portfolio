@@ -21,7 +21,9 @@ import { useNavigate } from "react-router";
 
 function closeButton () {
     const closeButtons = document.getElementsByClassName('close-button');
-    document.getElementById('favorite-projects').style.flexWrap = 'nowrap';
+    for (let element of document.getElementsByClassName('favorite-projects')) {
+        element.style.flexWrap = 'nowrap';
+    }
 
     for (let closeButton of closeButtons) {
         closeButton.style.opacity = 0;
@@ -291,7 +293,7 @@ export default function Projects () {
                                 <br></br>
 
                                 <a className="satblue" href="https://github.com/Gabriel-Bigelow/reddit-client">Check out Lurker's GitHub repository.</a>
-                                <p>This was one of my favorite projects because it improved upon a product that I already enjoy. It also helped me solidify my understanding of React and Redux, as 
+                                <p>This is one of my favorite projects because it improved upon a product that I already enjoy. It also helped me solidify my understanding of React and Redux, as 
                                     well as a working with APIs. Along with bettering my skills in React/Redux, I communicated regularly with a peer that was building a similar website, in which we helped each other
                                     talk through the problems we were having, and point out bugs to each other. Throughout this communication and production process, I learned a great deal about structuring a project, effectively communicating
                                     ideas to a peer, time management, and efficient programming.
@@ -309,18 +311,29 @@ export default function Projects () {
                             </video>
                             <img className="project-image" id="google-flash-cards-image" alt="Super Ball Mania project preview" src={googleFlashCards}/>
                             <h3 className="project-title" id="google-flash-cards-title">Google Flash Cards</h3>
-                            <h4 className="project-short" id="google-flash-cards-short">Google Flash Cards is an study app built with React/Redux</h4>
+                            <h4 className="project-short" id="google-flash-cards-short">Google Flash Cards is a study app that utilizes the Google API to access Google Docs and store saved Flash Cards data to your Google Drive, 
+                                    so that you can create and use your custom study guides wherever you go.</h4>
                             <div className="project-long" id="google-flash-cards-long">
-                                <p> Google Flash Cards is a study app that utilizes the Google API to access Google Docs and store saved Flash Cards data to your Google Drive, 
-                                    so that you can create and use your custom study guides wherever you go.
+                            <iframe width="70%" height="300" src="https://www.youtube.com/embed/xR3WueEZjko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <p> Google Flash Cards IS useable without logging in, but the created Topics, Quizzes, and flash cards will be lost if a user does not 
+                                    connect Google Flash Cards to their Google Account and leaves the app's webpage. Upon first login to Google Flash Cards, the app 
+                                    will check to see if a Flash Cards app - Saved Data document appears on a user's Google Drive account. If it does not, one will be 
+                                    created, and formatted to allow for data to be saved. If a saved data document does already exist, that data will be used to populate 
+                                    the Flash Cards app with elements, bringing the app's state back to the most recent version of the user's saved data.
+                                    <br></br>
+                                    <br></br>
+                                    When a user creates, edits, or deletes a Topic or Quiz from Flash Cards, an update request will be sent to the Google API to make 
+                                    the appropriate changes to the Flash Cards app - Saved Data document. 
+
                                 </p>
 
                                 <a className="satblue" href="https://other-to-music.netlify.app/">Check it out here!</a>
                                 <br></br>                                
                                 <a className="satblue" href="https://github.com/Gabriel-Bigelow/jammming">Here is a link to the GitHub repository!</a>
                                 <p>
-                                    This was one of my favorite projects because it was my first experience creating an app with API integration, as well as OAuth2 authentication. 
-                                    Although initially challenging, it taught me many things throughout, such as how to read API documentation, as well as how to work with authentication. 
+                                    This is one of my favorite projects because it is a helpful tool to study and quiz yourself on any topic you want, and the saved data persists across
+                                    can be accessed from anywhere in the world with an internet connection. I like to use my app to study up on programming terms and definitions, as well as practice 
+                                    interview questions.
                                     <br></br>
                                     <br></br>
                                     <br></br>
@@ -373,7 +386,7 @@ export default function Projects () {
                                     <a className="satblue" href="https://github.com/Gabriel-Bigelow/super-ball-mania">Here is a link to the GitHub repository!</a>
                                     
                                 <p>
-                                    This was one of my favorite projects because it was my first experience releasing a product to a considerable userbase. It involves something that I'm passionate about: videogames! This taught me several things, such as the importance
+                                    This is one of my favorite projects because it was my first experience releasing a product to a considerable userbase. It involves something that I'm passionate about: videogames! This taught me several things, such as the importance
                                     of thoroughly testing edge cases in your code before release, how to use software packagers, bundlers, and push that software to an external database.
                                     I had a lot of fun squashing bugs for my users and ensuring that their experience with my product was a pleasant one, whether those bugs were brought to my attention by
                                     direct messages, comments, or my own personal testing.
@@ -403,7 +416,7 @@ export default function Projects () {
                                     <br></br>                                
                                     <a className="satblue" href="https://github.com/Gabriel-Bigelow/jammming">Here is a link to the GitHub repository!</a>
                                 <p>
-                                    This was one of my favorite projects because it was my first experience creating an app with API integration, as well as OAuth2 authentication. 
+                                    This is one of my favorite projects because it was my first experience creating an app with API integration, as well as OAuth2 authentication. 
                                     Although initially challenging, it taught me many things throughout, such as how to read API documentation, as well as how to work with authentication. 
                                     <br></br>
                                     <br></br>
