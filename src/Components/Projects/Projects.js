@@ -334,7 +334,7 @@ export default function Projects () {
                                 <br></br>                                
                                 <a className="satblue" href="https://github.com/Gabriel-Bigelow/google-flash-cards">Here is a link to the GitHub repository!</a>
                                 <p>
-                                    This is one of my favorite projects because it is a helpful tool to study and quiz yourself on any topic you want, and the saved data persists across
+                                    This is one of my favorite projects because it is a helpful tool to study and quiz yourself on any topic you want, and the saved data
                                     can be accessed from anywhere in the world with an internet connection. I like to use my app to study up on programming terms and definitions, as well as practice 
                                     interview questions.
                                     <br></br>
