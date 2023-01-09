@@ -12,6 +12,8 @@ import superBallMania from '../../images/projects/superBallMania.webp';
 import superBallManiaVid from '../../images/projects/superBallManiaVid.mp4';
 import jammming from '../../images/projects/jammming.webp';
 import jammmingVid from '../../images/projects/jammmingVid.mp4';
+import googleFlashCards from '../../images/projects/googleFlashCards.webp';
+import googleFlashCardsVid from '../../images/projects/googleFlashCardsVid.mp4';
 
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 import { useNavigate } from "react-router";
@@ -254,10 +256,7 @@ export default function Projects () {
                 </div>
 
                 <div id="all-projects">
-                    <div className="favorite-projects" id="favorite-projects">
-                        <button className="close-button" id="close-button-1">X</button>
-                        <button className="close-button" id="close-button-2">Hide Project Details</button>
-
+                <div className="favorite-projects">
                         <div className="project" id="lurker-container" onMouseOver={handleMouseOver}>
                             <div className="project-cover" id="lurker"></div>
                             <video className="project-video" id="lurker-video" loop>
@@ -302,6 +301,50 @@ export default function Projects () {
                                 <br></br>
                             </div>
                         </div>
+
+                        <div className="project" id="google-flash-cards-container" onMouseOver={handleMouseOver}>
+                            <div className="project-cover" id="google-flash-cards"></div>
+                            <video className="project-video" id="google-flash-cards-video" loop>
+                                <source src={googleFlashCardsVid}></source>
+                            </video>
+                            <img className="project-image" id="google-flash-cards-image" alt="Super Ball Mania project preview" src={googleFlashCards}/>
+                            <h3 className="project-title" id="google-flash-cards-title">Google Flash Cards</h3>
+                            <h4 className="project-short" id="google-flash-cards-short">Google Flash Cards is an study app built with React/Redux</h4>
+                            <div className="project-long" id="google-flash-cards-long">
+                                <p> Google Flash Cards is a study app that utilizes the Google API to access Google Docs and store saved Flash Cards data to your Google Drive, 
+                                    so that you can create and use your custom study guides wherever you go.
+                                </p>
+
+                                <a className="satblue" href="https://other-to-music.netlify.app/">Check it out here!</a>
+                                <br></br>                                
+                                <a className="satblue" href="https://github.com/Gabriel-Bigelow/jammming">Here is a link to the GitHub repository!</a>
+                                <p>
+                                    This was one of my favorite projects because it was my first experience creating an app with API integration, as well as OAuth2 authentication. 
+                                    Although initially challenging, it taught me many things throughout, such as how to read API documentation, as well as how to work with authentication. 
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        
+
+
+                    
+                    </div>
+
+
+
+
+
+                    <div className="favorite-projects" id="favorite-projects">
+                        <button className="close-button" id="close-button-1">X</button>
+                        <button className="close-button" id="close-button-2">Hide Project Details</button>
+
+                        
 
                         <div className="project" id="super-ball-mania-container" onMouseOver={handleMouseOver}>
                             <div className="project-cover" id="super-ball-mania"></div>
@@ -374,37 +417,7 @@ export default function Projects () {
                     </div>
 
                     
-                    <div className="favorite-projects">
-                        <div className="project" id="flash-cards-container" onMouseOver={handleMouseOver}>
-                            <div className="project-cover" id="flash-cards"></div>
-                            <video className="project-video" id="flash-cards-video" loop>
-                                <source src={jammmingVid}></source>
-                            </video>
-                            <img className="project-image" id="flash-cards-image" alt="Super Ball Mania project preview" src={jammming}/>
-                            <h3 className="project-title" id="flash-cards-title">Flash Cards</h3>
-                            <h4 className="project-short" id="flash-cards-short">Flash Cards is an study app built with React/Redux</h4>
-                            <div className="project-long" id="flash-cards-long">
-                                <p>Flash Cards is a multi-page application written with React, that takes advantage of the Spotify API to handle playlist creation, cloning, and deletion.
-                                    When a user first visits Jammming, they will be prompted to authorize the application to make changes to their Spotify account, so that it can pull their
-                                    current playlists, in order to update, clone, or delete them, as well as add brand-new playlists, based on user actions.
-                                    </p>
-                                    <a className="satblue" href="https://other-to-music.netlify.app/">Check it out here!</a>
-                                    <br></br>                                
-                                    <a className="satblue" href="https://github.com/Gabriel-Bigelow/jammming">Here is a link to the GitHub repository!</a>
-                                <p>
-                                    This was one of my favorite projects because it was my first experience creating an app with API integration, as well as OAuth2 authentication. 
-                                    Although initially challenging, it taught me many things throughout, such as how to read API documentation, as well as how to work with authentication. 
-                                    <br></br>
-                                    <br></br>
-                                    <br></br>
-                                    <br></br>
-                                </p>
-                            </div>
-                        </div>
-
-
-                    {/* all projects close*/}
-                    </div>
+                   {/* all projects close*/}
                 </div>
 
             </div>
