@@ -53,7 +53,7 @@ export default function Home () {
             <div id="actual-glow"></div>
                 <div id="city-glow">
                     <h1 className="home-title" id="title0">Gabriel Bigelow</h1>
-                    <h3 className="home-subtitle" id="home-subtitle">Software engineer, Front-End Developer</h3>
+                    <h3 className="home-subtitle" id="home-subtitle">Software engineer, Full Stack Developer</h3>
                     <div id="home-animation"></div>
                     <img className="city" src={city} alt="a silhouette of a city" />
                 </div>

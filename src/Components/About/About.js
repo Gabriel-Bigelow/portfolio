@@ -45,7 +45,7 @@ export default function About () {
         if (section !== 'AboutMe') {
             dispatch(setSection('AboutMe'));
             dispatch(setBodyText(`
-            My name is Gabriel Bigelow. I am a Front-End Developer from Toledo, Ohio.
+            My name is Gabriel Bigelow. I am a Full Stack Developer from Toledo, Ohio.
             <br><br>
             I discovered my enthusiasm for programming in the summer of 2021 while helping my brother start a business,
             in which we had regular contact with web developers. Having always loved computers and technology, I decided to look into online coding classes, and it was love at first
