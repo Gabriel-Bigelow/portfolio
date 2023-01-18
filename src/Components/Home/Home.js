@@ -65,7 +65,7 @@ export default function Home () {
             <div id="foreground" className="home-body">
                 <div id="not-glow">
                     <h1 className="home-title" id="title1">Gabriel Bigelow</h1>
-                    <h3 className="home-subtitle" id="home-subtitle">Software engineer, Front-End Developer</h3>
+                    <h3 className="home-subtitle" id="home-subtitle">Software engineer, Full Stack Developer</h3>
                     <div id="home-animation">
                         <div className="home-animation-container" id="hae-left"><h4 id="hae1">Let's</h4></div>
                         <div className="home-animation-container" id="hae-center"><h4 id="hae2">Build</h4></div>
