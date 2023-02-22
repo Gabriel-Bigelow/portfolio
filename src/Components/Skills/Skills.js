@@ -38,7 +38,7 @@ export default function Skills () {
 
     useEffect(() => {
         dispatch(setSection('Skills'));
-        dispatch(setBodyText(`These are the technologies that I use!
+        dispatch(setBodyText(`These are some of the technologies that I use!
         <ul id="tech-list">
             <li><span class="list-header">Front-End</span><ul>
                     <li>JavaScript (vanilla, React, Redux)</li>
