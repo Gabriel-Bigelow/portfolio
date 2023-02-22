@@ -7,6 +7,8 @@ import { selectBodyText, selectSection, setBodyText, setSection } from "../Secti
 import { arrowNavigate, styleBeforeNavigate, styleNavigatedFrom } from "../../functions/arrowNavigation";
 
 
+
+
 import './contact.css';
 
 import arrow from '../../images/arrow.svg';
@@ -15,9 +17,9 @@ import github from '../../images/skills/github.svg';
 import gmail from '../../images/skills/gmail.svg';
 import linkedin from '../../images/skills/linkedin.svg';
 
-const serviceID = 'service_0yiyk7z';
-const templateID = 'template_s1lbpub';
-const publicKey = 'V4Vz8ytcd9G4KaQlc';
+const serviceID = process.env.REACT_APP_SERVICE_ID;
+const templateID = process.env.REACT_APP_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
 export default function Contact () {
     const dispatch = useDispatch();
