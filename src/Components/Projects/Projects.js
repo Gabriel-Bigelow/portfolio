@@ -6,6 +6,8 @@ import { selectBodyText, selectSection, setBodyText, setSection } from "../Secti
 import "./projects.css";
 import arrow from '../../images/arrow.svg'
 import gitbash from '../../images/git-bash.svg';
+import saltTech from '../../images/projects/saltTech.webp';
+import saltTechVid from '../../images/projects/saltTechVid.mp4';
 import lurker from '../../images/projects/lurker.webp';
 import lurkerVid from '../../images/projects/lurkerVid.mp4';
 import superBallMania from '../../images/projects/superBallMania.webp';
@@ -261,7 +263,34 @@ export default function Projects () {
                 </div>
 
                 <div id="all-projects">
-                <div className="favorite-projects">
+                    <div className="favorite-projects">
+                        <div className="project" id="salt-tech-container" onMouseOver={handleMouseOver}>
+                            <div className="project-cover" id="salt-tech"></div>
+                            <video className="project-video" id="salt-tech-video" loop>
+                                <source src={saltTechVid}></source>
+                            </video>
+                            <img className="project-image" id="salt-tech-image" alt="Salt Tech Project Preview" src={saltTech}/>
+                            <h3 className="project-title" id="salt-tech-title">Salt Tech</h3>
+                            <h4 className="project-short" id="salt-tech-short">Salt Tech is a fullstack e-commerce app built with React for the front-end, Node.js and Express.js for the back-end, and Supabase to host the database.</h4>
+                            <div className="project-long" id="salt-tech-long">
+                                <p>Salt Tech is an e-commerce app that simulates a real e-commerce business and facilitates user registration, login/logout, 
+                                    account management, cart management, product management, and transactions.
+                                </p>
+                                
+                                <a className="satblue" href="https://salttech.netlify.app/">See Salt Tech in action here!</a> 
+                                <br></br>
+
+                                <a className="satblue" href="https://github.com/Gabriel-Bigelow/salt-tech">Check out salt-tech's GitHub repository.</a>
+                                <p>This is one of my favorite projects because I got to create a simulated e-commerce app dedicated to a subject that I
+                                    really enjoy: computers. It was also a good exercise for a problem solving, between deploying a backend on a hosting service
+                                    dedicated to hosting purely front-end applications, managing and persisting user sessions after navigating away from the site,
+                                    and database management.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="favorite-projects">
                         <div className="project" id="lurker-container" onMouseOver={handleMouseOver}>
                             <div className="project-cover" id="lurker"></div>
                             <video className="project-video" id="lurker-video" loop>
@@ -343,24 +372,12 @@ export default function Projects () {
                                     <br></br>
                                 </p>
                             </div>
-                        </div>
-
-
-                        
-
-
-                    
+                        </div>                    
                     </div>
-
-
-
-
 
                     <div className="favorite-projects" id="favorite-projects">
                         <button className="close-button" id="close-button-1">X</button>
                         <button className="close-button" id="close-button-2">Hide Project Details</button>
-
-                        
 
                         <div className="project" id="super-ball-mania-container" onMouseOver={handleMouseOver}>
                             <div className="project-cover" id="super-ball-mania"></div>
@@ -428,12 +445,7 @@ export default function Projects () {
                                 </p>
                             </div>
                         </div>
-
-                    {/* favorite projects close*/}
                     </div>
-
-                    
-                   {/* all projects close*/}
                 </div>
 
             </div>
