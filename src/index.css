@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('./_resources/fonts/NunitoSans-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('./_resources/fonts/NunitoSans-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('./_resources/fonts/NunitoSans-Italic.ttf');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('./_resources/fonts/NunitoSans-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('./_resources/fonts/Oswald-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'AntrySans';
+  src: url('./_resources/fonts/AntrySans.otf') format("opentype")
+}
+
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./_resources/fonts/LEMONMILK-Medium.otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('./_resources/fonts/LEMONMILK-Bold.otf');
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+      font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  html {
+      font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  html {
+      font-size: 28px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-1920px, -718px);
+  }
+}
+
+
+* {
+  scroll-behavior: smooth;
+}
+
+#background {
+  position: fixed;
+  width: 1000vw;
+  height: 1000vh;
+  background: url("/src/_resources/images/space.jpg") repeat;
+  z-index: -1000;
+  animation: slide 120s linear infinite;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color:white;
+  overflow-x: hidden
+}
+body::-webkit-scrollbar{
+  width: 1rem;
+}
+body::-webkit-scrollbar-track {
+  background:rgb(50, 60, 71);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 120, 142);
+  border:1px solid rgb(50, 150, 255);
+  border-radius: 2px
+}
+
+*::-webkit-scrollbar{
+  width: 1rem;
+}
+*::-webkit-scrollbar-track {
+  background:rgb(50, 60, 71);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 120, 142);
+  border:1px solid rgb(50, 150, 255);
+  border-radius: 2px
+}
+
+.toast__body {
+  font-size: 2rem;
+}
