@@ -28,7 +28,6 @@ export default function Projects() {
 	const mainBodyTarget = [
 		`My favorite projects always involve challenging myself, because they make me a better developer
     and scratch my itch for learning.`,
-		// `Here are some of my favorite projects:`,
 	];
 
 	const professionalProjects = [factoryPure];

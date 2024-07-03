@@ -50,11 +50,11 @@ export default function ProfessionalExperience({
 
 		function TableOfContents() {
 			return (
-				<div className="flex flex-col max-w-full truncate ">
+				<div className="flex flex-col max-w-full truncate">
 					<span className="text-center text-[1.25rem] font-bold">
 						Contents
 					</span>
-					<ul>
+					<ul className="pr-[1rem] overflow-auto">
 						<li className="font-bold truncate text-[whitesmoke]">
 							<ContentLink linkId="Summary" />
 						</li>
@@ -146,7 +146,6 @@ export default function ProfessionalExperience({
 		<div
 			id="js-selected-project"
 			style={{ scale: "0" }}
-			onMouseOver={(e: any) => handleMouseEvent(e, roleCompany)}
 			onMouseOut={handleMouseEvent}
 			className={`js-selected-project relative flex gap-[2rem] pl-[1rem] pr-[0.5rem] py-[2rem] pt-[3rem] opacity-100 border-[1px] h-full  bg-black/80 shadow-cool border-black/20 rounded-3xl backdrop-blur-[2px] duration-300`}
 		>
@@ -164,7 +163,6 @@ export default function ProfessionalExperience({
 					<div className="flex flex-col gap-[.5rem] h-full overflow-auto pr-[1rem]">
 						{data.technologies && (
 							<div>
-								{/* <h5 className="font-semibold">Technologies:</h5> */}
 								<div className="flex flex-wrap gap-x-[1rem] gap-y-[4px] max-w-[45em]">
 									{data.technologies.map((t) => (
 										<span className="text-satblue rounded-3xl bg-blue/20 px-[6px]">

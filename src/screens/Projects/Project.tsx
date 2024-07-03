@@ -38,15 +38,6 @@ export default function Project({
 				`bg-black/80 shadow-cool border-[1px] rounded-3xl backdrop-blur-[2px]`
 			} duration-300`}
 			style={{ scale: "0" }}
-			onMouseOver={(e: SyntheticEvent) =>
-				handleMouseEvent(e, projectData.title)
-			}
-			onMouseOut={(e: SyntheticEvent) =>
-				handleMouseEvent(e, projectData.title)
-			}
-			onClick={(e: SyntheticEvent) =>
-				handleMouseEvent(e, projectData.title)
-			}
 		>
 			<div className="flex flex-col gap-[2rem] h-full overflow-y-auto px-[1rem]">
 				<CloseButton onClick={closeProject} />
