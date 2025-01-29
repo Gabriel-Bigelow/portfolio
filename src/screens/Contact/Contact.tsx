@@ -18,17 +18,22 @@ export default function Contact() {
 	const [senderEmail, setSenderEmail] = useState("");
 	const [message, setMessage] = useState("");
 
-	function sendEmail(e: SyntheticEvent) {
+	async function sendEmail(e: SyntheticEvent) {
 		e.preventDefault();
 		emailjs.init({
 			publicKey,
 		});
 		emailjs
-			.send(serviceId, templateId, {
-				from_name: senderName,
-				from_email: senderEmail,
-				message,
-			})
+			.send(
+				serviceId,
+				templateId,
+				{
+					from_name: senderName,
+					from_email: senderEmail,
+					message,
+				},
+				publicKey
+			)
 			.then(
 				(response) => {
 					sendToast({ message: "Email sent." });
@@ -37,7 +42,11 @@ export default function Contact() {
 					setMessage("");
 				},
 				(error) => {
-					sendToast({ message: "Email sent." });
+					console.error(error);
+					sendToast({
+						message:
+							"Sorry, something went wrong. Please email me directly at gabriel@gabrielbigelow.com.",
+					});
 				}
 			);
 	}
