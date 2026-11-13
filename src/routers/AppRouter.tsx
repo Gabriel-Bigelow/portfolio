@@ -12,6 +12,7 @@ import Contact from "../screens/Contact/Contact";
 import Skills from "../screens/Skills/Skills";
 import Projects from "../screens/Projects/Projects";
 import AboutMe from "../screens/AboutMe/AboutMe";
+import PrivacyPolicy from "../screens/PrivacyPolicy/PrivacyPolicy";
 
 export default function AppRouter() {
 	const location = useLocation();
@@ -68,6 +69,7 @@ export default function AppRouter() {
 					<Route path="/projects" element={<Projects />} />
 					<Route path="/skills" element={<Skills />} />
 					<Route path="/contact" element={<Contact />} />
+					<Route path="/privacy-policy" element={<PrivacyPolicy />} />
 				</Routes>
 			</div>
 		</div>

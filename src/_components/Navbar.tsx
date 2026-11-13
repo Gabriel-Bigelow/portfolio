@@ -37,6 +37,9 @@ export default function Navbar() {
 		);
 	}
 
+	// The privacy policy is a standalone page linked from an external app.
+	if (location.pathname === "/privacy-policy") return null;
+
 	return (
 		<div
 			id="navbar"

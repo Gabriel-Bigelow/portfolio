@@ -3,44 +3,44 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "Nunito Sans";
-	src: url("./_resources/fonts/NunitoSans-Regular.ttf");
+	font-family: 'Nunito Sans';
+	src: url('./_resources/fonts/NunitoSans-Regular.ttf');
 	font-weight: 400;
 }
 @font-face {
-	font-family: "Nunito Sans";
-	src: url("./_resources/fonts/NunitoSans-Bold.ttf");
+	font-family: 'Nunito Sans';
+	src: url('./_resources/fonts/NunitoSans-Bold.ttf');
 	font-weight: bold;
 }
 @font-face {
-	font-family: "Nunito Sans";
-	src: url("./_resources/fonts/NunitoSans-Italic.ttf");
+	font-family: 'Nunito Sans';
+	src: url('./_resources/fonts/NunitoSans-Italic.ttf');
 	font-style: italic;
 }
 @font-face {
-	font-family: "Nunito Sans";
-	src: url("./_resources/fonts/NunitoSans-BoldItalic.ttf");
+	font-family: 'Nunito Sans';
+	src: url('./_resources/fonts/NunitoSans-BoldItalic.ttf');
 	font-weight: bold;
 	font-style: italic;
 }
 @font-face {
-	font-family: "Oswald";
-	src: url("./_resources/fonts/Oswald-VariableFont_wght.ttf");
+	font-family: 'Oswald';
+	src: url('./_resources/fonts/Oswald-VariableFont_wght.ttf');
 }
 
 @font-face {
-	font-family: "AntrySans";
-	src: url("./_resources/fonts/AntrySans.otf") format("opentype");
+	font-family: 'AntrySans';
+	src: url('./_resources/fonts/AntrySans.otf') format('opentype');
 }
 
 @font-face {
-	font-family: "LemonMilk";
-	src: url("./_resources/fonts/LEMONMILK-Medium.otf");
+	font-family: 'LemonMilk';
+	src: url('./_resources/fonts/LEMONMILK-Medium.otf');
 	font-weight: 400;
 }
 @font-face {
-	font-family: "LemonMilk";
-	src: url("./_resources/fonts/LEMONMILK-Bold.otf");
+	font-family: 'LemonMilk';
+	src: url('./_resources/fonts/LEMONMILK-Bold.otf');
 	font-weight: bold;
 }
 
@@ -79,13 +79,13 @@
 	position: fixed;
 	width: 1000vw;
 	height: 1000vh;
-	background: url("/src/_resources/images/space.jpg") repeat;
+	background: url('/src/_resources/images/space.jpg') repeat;
 	z-index: -1000;
 	animation: slide 120s linear infinite;
 }
 
 body {
-	font-family: "Nunito Sans", sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
 	color: white;
 	overflow-x: hidden;
 }
